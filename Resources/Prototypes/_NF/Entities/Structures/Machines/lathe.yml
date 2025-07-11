@@ -50,6 +50,7 @@
   - type: BlueprintReceiver
     whitelist:
       tags:
+      - BlueprintAutolathe #Scav
       - NFBlueprintServiceTechfab
   - type: OreSiloClient
 
@@ -111,6 +112,7 @@
   - type: BlueprintReceiver
     whitelist:
       tags:
+      - BlueprintAutolathe #Scav
       - NFBlueprintEngineeringTechfab
   - type: OreSiloClient
 
@@ -147,6 +149,7 @@
   - type: BlueprintReceiver
     whitelist:
       tags:
+      - BlueprintAutolathe #Scav
       - NFBlueprintSalvageTechfab
   - type: OreSiloClient
 
@@ -183,6 +186,7 @@
   - type: BlueprintReceiver
     whitelist:
       tags:
+      - BlueprintAutolathe #Scav
       - NFBlueprintNfsdTechfab
   - type: OreSiloClient
 
@@ -217,6 +221,7 @@
   - type: BlueprintReceiver
     whitelist:
       tags:
+      - BlueprintAutolathe #Scav
       - NFBlueprintMercenaryTechfab
   - type: OreSiloClient
 
@@ -264,6 +269,7 @@
   - type: BlueprintReceiver
     whitelist:
       tags:
+      - BlueprintAutolathe #Scav
       - NFBlueprintMercenaryTechfab
       - NFBlueprintNfsdTechfab
   - type: OreSiloClient
