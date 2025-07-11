@@ -1,0 +1,25 @@
+- type: vendingMachineInventory
+  id: VendingMachineBlueprintAllInventory
+  startingInventory:
+    BlueprintTopicals: 4294967295 # Infinite
+    BlueprintChemistryBasic: 4294967295 # Infinite
+    BlueprintChemistryAdvanced: 4294967295 # Infinite
+    BlueprintMedicalDevices: 4294967295 # Infinite
+    BlueprintMedicalPPE: 4294967295 # Infinite
+    BlueprintMedicalClothing: 4294967295 # Infinite
+    BlueprintSurgery: 4294967295 # Infinite
+    BlueprintMedicalMobility: 4294967295 # Infinite
+    BlueprintMedikit: 4294967295 # Infinite
+
+- type: vendingMachineInventory
+  id: VendingMachineBlueprintMedical
+  startingInventory:
+    BlueprintTopicals: 5
+    BlueprintChemistryBasic: 5
+    BlueprintChemistryAdvanced: 5
+    BlueprintMedicalDevices: 5
+    BlueprintMedicalPPE: 5
+    BlueprintMedicalClothing: 5
+    BlueprintSurgery: 5
+    BlueprintMedicalMobility: 5
+    BlueprintMedikit: 5

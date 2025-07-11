@@ -1,0 +1,226 @@
+- type: entity
+  parent: NFBaseBlueprint #Shop blueprints shouldnt be faxable
+  id: BlueprintBlue
+  name: general blueprint
+  description: A blueprint containing techfab schematics.
+  categories: [HideSpawnMenu, DoNotMap]
+  components:
+  - type: Sprite
+    layers:
+      - state: icon-base
+        color: "#0019dc"
+      - state: icon-text
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_stamp-generic
+        offset: 0.15,-0.1
+        map: ["enum.PaperVisualLayers.Stamp"]
+        visible: false
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_words
+        map: ["enum.PaperVisualLayers.Writing"]
+        visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#0019dc"
+      - state: inhand-left-text
+      right:
+      - state: inhand-right-base
+        color: "#0019dc"
+      - state: inhand-right-text
+  - type: Tag
+    tags:
+    - BlueprintAutolathe
+    - Document
+    - Paper
+
+#Engineering
+- type: entity
+  parent: NFBaseBlueprint
+  id: BlueprintYellow
+  name: engineering blueprint
+  description: A blueprint containing techfab schematics.
+  categories: [HideSpawnMenu, DoNotMap]
+  components:
+  - type: Sprite
+    layers:
+      - state: icon-base
+        color: "#e1db73"
+      - state: icon-text
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_stamp-generic
+        offset: 0.15,-0.1
+        map: ["enum.PaperVisualLayers.Stamp"]
+        visible: false
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_words
+        map: ["enum.PaperVisualLayers.Writing"]
+        visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#e1db73"
+      - state: inhand-left-text
+      right:
+      - state: inhand-right-base
+        color: "#e1db73"
+      - state: inhand-right-text
+  - type: Tag
+    tags:
+    - BlueprintAutolathe
+    - Document
+    - Paper
+
+#Botany
+- type: entity
+  parent: NFBaseBlueprint #Shop blueprints shouldnt be faxable
+  id: BlueprintGreen
+  name: general blueprint
+  description: A blueprint containing techfab schematics.
+  categories: [HideSpawnMenu, DoNotMap]
+  components:
+  - type: Sprite
+    layers:
+      - state: icon-base
+        color: "#00b615"
+      - state: icon-text
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_stamp-generic
+        offset: 0.15,-0.1
+        map: ["enum.PaperVisualLayers.Stamp"]
+        visible: false
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_words
+        map: ["enum.PaperVisualLayers.Writing"]
+        visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#00b615"
+      - state: inhand-left-text
+      right:
+      - state: inhand-right-base
+        color: "#00b615"
+      - state: inhand-right-text
+  - type: Tag
+    tags:
+    - BlueprintAutolathe
+    - Document
+    - Paper
+
+# Research
+- type: entity
+  parent: NFBaseBlueprint #Shop blueprints shouldnt be faxable
+  id: BaseBlueprintPurple
+  name: general blueprint
+  description: A blueprint containing techfab schematics.
+  categories: [HideSpawnMenu, DoNotMap]
+  components:
+  - type: Sprite
+    layers:
+      - state: icon-base
+        color: "#b200d4"
+      - state: icon-text
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_stamp-generic
+        offset: 0.15,-0.1
+        map: ["enum.PaperVisualLayers.Stamp"]
+        visible: false
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_words
+        map: ["enum.PaperVisualLayers.Writing"]
+        visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#b200d4"
+      - state: inhand-left-text
+      right:
+      - state: inhand-right-base
+        color: "#b200d4"
+      - state: inhand-right-text
+  - type: Tag
+    tags:
+    - BlueprintAutolathe
+    - Document
+    - Paper
+
+#salvage
+- type: entity
+  parent: NFBaseBlueprint #Shop blueprints shouldnt be faxable
+  id: BaseBlueprintBrown
+  name: general blueprint
+  description: A blueprint containing techfab schematics.
+  categories: [HideSpawnMenu, DoNotMap]
+  components:
+  - type: Sprite
+    layers:
+      - state: icon-base
+        color: "#c28500"
+      - state: icon-text
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_stamp-generic
+        offset: 0.15,-0.1
+        map: ["enum.PaperVisualLayers.Stamp"]
+        visible: false
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_words
+        map: ["enum.PaperVisualLayers.Writing"]
+        visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#c28500"
+      - state: inhand-left-text
+      right:
+      - state: inhand-right-base
+        color: "#c28500"
+      - state: inhand-right-text
+  - type: Tag
+    tags:
+    - BlueprintAutolathe
+    - Document
+    - Paper
+
+#medical
+- type: entity
+  parent: NFBaseBlueprint #Shop blueprints shouldnt be faxable
+  id: BaseBlueprintLightBlue
+  name: general blueprint
+  description: A blueprint containing techfab schematics.
+  categories: [HideSpawnMenu, DoNotMap]
+  components:
+  - type: Sprite
+    layers:
+      - state: icon-base
+        color: "#97cae1"
+      - state: icon-text
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_stamp-generic
+        offset: 0.15,-0.1
+        map: ["enum.PaperVisualLayers.Stamp"]
+        visible: false
+      - sprite: Objects/Misc/bureaucracy.rsi
+        state: paper_words
+        map: ["enum.PaperVisualLayers.Writing"]
+        visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#97cae1"
+      - state: inhand-left-text
+      right:
+      - state: inhand-right-base
+        color: "#97cae1"
+      - state: inhand-right-text
+  - type: Tag
+    tags:
+    - BlueprintAutolathe
+    - Document
+    - Paper

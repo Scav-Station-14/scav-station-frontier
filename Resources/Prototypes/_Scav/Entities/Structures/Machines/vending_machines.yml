@@ -1,0 +1,64 @@
+- type: entity
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, VendingMachine]
+  id: VendingMachineBlueprint
+  name: FabVend
+  description: A vendor selling blueprints for techfabs.
+  components:
+  - type: VendingMachine
+    pack: EmptyVendingMachineInventory #will be filled in by child versions
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    ejectDelay: 2.1
+  #- type: Advertise
+  #  pack: FuelVendAds
+  #- type: SpeakOnUIClosed
+  #  pack: FuelVendGoodbyes
+  - type: Sprite
+    sprite: _Scav/Structures/Machines/VendingMachines/blueprint.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 1.6
+    color: "#0600ff"
+
+#Variant with infinite of everything, mostly for admin use
+- type: entity
+  parent: VendingMachineBlueprint
+  id: VendingMachineBlueprintAll
+  name: Universal FabVend
+  description: A vendor selling blueprints for techfabs. This one stocks blueprints of all kinds.
+  components:
+  - type: VendingMachine
+    pack: VendingMachineBlueprintAllInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    ejectDelay: 2.1
+
+#Medical
+- type: entity
+  parent: VendingMachineBlueprint
+  id: VendingMachineBlueprintMedical
+  name: Medical FabVend
+  description: A vendor selling blueprints for techfabs. This one stocks medical blueprints.
+  components:
+  - type: VendingMachine
+    pack: VendingMachineBlueprintMedical
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    ejectState: eject-unshaded
+    denyState: deny-unshaded
+    ejectDelay: 2.1

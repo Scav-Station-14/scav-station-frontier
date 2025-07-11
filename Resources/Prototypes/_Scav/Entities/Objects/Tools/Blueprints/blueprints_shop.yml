@@ -1,0 +1,160 @@
+#Medical
+- type: entity
+  parent: BaseBlueprintLightBlue
+  id: BlueprintTopicals
+  name: topicals blueprint
+  description: A techfab blueprint. It contains recipes for medical topicals.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - Brutepack
+    - Ointment
+    - Gauze
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintLightBlue
+  id: BlueprintChemistryBasic
+  name: basic chemistry blueprint
+  description: A techfab blueprint. It contains recipes for basic chemistry implements.
+  components:
+  - type: Blueprint
+    providedRecipes:  #Scav: Differs from ChemistryStatic latherecipepack in that this doesnt provide glasses. that will be in the medical devices section.
+      - Beaker
+      - LargeBeaker
+      - Syringe
+      - BlankMediPen
+      - PillCanister
+      - HandLabeler
+      - BaseChemistryEmptyVial
+      - Jug
+      - ChemistryEmptyBottle01
+      - DiseaseSwab #needs to be somewhere and virology isnt complete
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintLightBlue
+  id: BlueprintChemistryAdvanced
+  name: advanced chemistry blueprint
+  description: A techfab blueprint. It contains recipes for advanced chemistry implements.
+  components:
+  - type: Blueprint
+    providedRecipes:  #Scav: Differs from ChemistryStatic latherecipepack in that this doesnt provide glasses. that will be in the medical devices section.
+      - ChemicalPayload
+      - CryostasisBeaker
+      - SyringeCryostasis
+      - BluespaceBeaker
+      - SyringeBluespace
+      - JugBluespace #these last three are the ones normally provided by science, possibly move them to the next tier if the others are in high demand
+      - ReinforcedJug
+      - VialBluespace
+  - type: StaticPrice
+    price: 1200 #this bypasses research so should be expensive
+
+- type: entity
+  parent: BaseBlueprintLightBlue
+  id: BlueprintSurgery
+  name: surgical implements blueprint
+  description: A techfab blueprint. It contains recipes for surgical implements.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - Scalpel
+      - Retractor
+      - Cautery
+      - Drill
+      - Saw
+      - Hemostat
+  - type: StaticPrice
+    price: 50 #surgery isnt very important rn, might as well make this cheaper
+
+- type: entity
+  parent: BaseBlueprintLightBlue
+  id: BlueprintMedicalDevices
+  name: medical devices blueprint
+  description: A techfab blueprint. It contains recipes for electronic medical devices.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - Implanter
+      - Defibrillator
+      - HandheldHealthAnalyzer
+      - ClothingEyesGlassesChemical
+      - CraftClothingEyesHudMedical
+      - CraftClothingEyesEyepatchHudMedical
+      - PowerCellSmall # For small appliances, convenience if anything
+      - MedicalAppraisalTool
+      - HandheldCrewMonitor
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: BaseBlueprintLightBlue
+  id: BlueprintMedicalPPE
+  name: medical PPE blueprint
+  description: A techfab blueprint. It contains recipes for medical PPE.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - ClothingHandsGlovesLatex
+      - ClothingHandsGlovesNitrile
+      - ClothingMaskSterile
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  parent: BaseBlueprintLightBlue
+  id: BlueprintMedicalMobility
+  name: medical mobility tool blueprint
+  description: A techfab blueprint. It contains recipes for roller beds, wheelchairs, and the like.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - RollerBedSpawnFolded
+      - CheapRollerBedSpawnFolded
+      - EmergencyRollerBedSpawnFolded
+      - VehicleWheelchairFolded
+      - WhiteCane
+  - type: StaticPrice
+    price: 100
+
+
+- type: entity
+  parent: BaseBlueprintLightBlue
+  id: BlueprintMedicalClothing
+  name: medical clothing blueprint
+  description: A techfab blueprint. It contains recipes for medical clothing and gear.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - UniformScrubsColorBlue
+      - UniformScrubsColorGreen
+      - UniformScrubsColorPurple
+      - ClothingOuterHospitalGown
+      - CraftChemBag
+      - BeltMedicalEMT
+      - BeltMedical
+      - CraftMedicalBag
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintLightBlue
+  id: BlueprintMedikit
+  name: empty medikit blueprint
+  description: A techfab blueprint. It contains recipes for medikits (contents not included).
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - Medkit
+      - MedkitBurn
+      - MedkitToxin
+      - MedkitO2
+      - MedkitBrute
+      - MedkitAdvanced
+      - MedkitRadiation
+      - MedkitCombat
+  - type: StaticPrice
+    price: 5
