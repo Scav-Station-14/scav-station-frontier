@@ -123,9 +123,25 @@
 
 - type: entity
   parent: BaseBlueprintLightBlue
+  id: BlueprintMedicalGear
+  name: medical equipment blueprint
+  description: A techfab blueprint. It contains recipes for medical gear.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - BodyBag
+      - CraftChemBag
+      - BeltMedicalEMT
+      - BeltMedical
+      - CraftMedicalBag
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintLightBlue
   id: BlueprintMedicalClothing
   name: medical clothing blueprint
-  description: A techfab blueprint. It contains recipes for medical clothing and gear.
+  description: A techfab blueprint. It contains recipes for medical clothing.
   components:
   - type: Blueprint
     providedRecipes:
@@ -133,12 +149,8 @@
       - UniformScrubsColorGreen
       - UniformScrubsColorPurple
       - ClothingOuterHospitalGown
-      - CraftChemBag
-      - BeltMedicalEMT
-      - BeltMedical
-      - CraftMedicalBag
   - type: StaticPrice
-    price: 100
+    price: 20
 
 - type: entity
   parent: BaseBlueprintLightBlue

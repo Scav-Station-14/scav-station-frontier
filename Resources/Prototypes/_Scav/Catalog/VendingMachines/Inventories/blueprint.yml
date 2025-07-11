@@ -7,6 +7,7 @@
     BlueprintMedicalDevices: 4294967295 # Infinite
     BlueprintMedicalPPE: 4294967295 # Infinite
     BlueprintMedicalClothing: 4294967295 # Infinite
+    BlueprintMedicalGear: 4294967295 # Infinite
     BlueprintSurgery: 4294967295 # Infinite
     BlueprintMedicalMobility: 4294967295 # Infinite
     BlueprintMedikit: 4294967295 # Infinite
@@ -20,6 +21,7 @@
     BlueprintMedicalDevices: 5
     BlueprintMedicalPPE: 5
     BlueprintMedicalClothing: 5
+    BlueprintMedicalGear: 5
     BlueprintSurgery: 5
     BlueprintMedicalMobility: 5
     BlueprintMedikit: 5
