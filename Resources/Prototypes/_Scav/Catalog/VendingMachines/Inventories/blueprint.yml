@@ -8,6 +8,21 @@
     BlueprintToolsBasic: 4294967295 # Infinite
     BlueprintToolsDevices: 4294967295 # Infinite
     BlueprintToolsAtmos: 4294967295 # Infinite
+    BlueprintToolsWelder: 4294967295 # Infinite
+    BlueprintToolsWelderAdvanced: 4294967295 # Infinite
+    BlueprintPowerCells: 4294967295 # Infinite
+    BlueprintCabling: 4294967295 # Infinite
+    BlueprintLightbulbs: 4294967295 # Infinite
+    BlueprintAdvancedMaterials: 4294967295 # Infinite
+    BlueprintComponentsBasic: 4294967295 # Infinite
+    BlueprintElectronicsPowerSupply: 4294967295 # Infinite
+    BlueprintElectronicsShipConstruction: 4294967295 # Infinite
+    BlueprintElectronicsLargeVessels: 4294967295 # Infinite
+    BlueprintElectronicsAtmospherics: 4294967295 # Infinite
+    BlueprintElectronicsWallPanels: 4294967295 # Infinite
+    BlueprintElectronicsDoors: 4294967295 # Infinite
+    BlueprintElectronicsRechargers: 4294967295 # Infinite
+    BlueprintElectronicsSolars: 4294967295 # Infinite
     BlueprintTopicals: 4294967295 # Infinite
     BlueprintChemistryBasic: 4294967295 # Infinite
     BlueprintChemistryAdvanced: 4294967295 # Infinite
@@ -33,7 +48,21 @@
     BlueprintToolsBasic: 50
     BlueprintToolsDevices: 20
     BlueprintToolsAtmos: 20
-
+    BlueprintToolsWelder: 20
+    BlueprintToolsWelderAdvanced: 10
+    BlueprintPowerCells: 50
+    BlueprintCabling: 50
+    BlueprintLightbulbs: 30
+    BlueprintAdvancedMaterials: 50
+    BlueprintComponentsBasic: 50
+    BlueprintElectronicsPowerSupply: 20
+    BlueprintElectronicsShipConstruction: 20
+    BlueprintElectronicsLargeVessels: 20
+    BlueprintElectronicsAtmospherics: 20
+    BlueprintElectronicsWallPanels: 20
+    BlueprintElectronicsDoors: 20
+    BlueprintElectronicsRechargers: 20
+    BlueprintElectronicsSolars: 20
 
 - type: vendingMachineInventory
   id: VendingMachineBlueprintMedical
