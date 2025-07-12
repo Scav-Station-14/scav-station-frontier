@@ -1,6 +1,13 @@
 - type: vendingMachineInventory
   id: VendingMachineBlueprintAllInventory
   startingInventory:
+    BlueprintAirTanks: 4294967295 # Infinite
+    BlueprintGlowsticks: 4294967295 # Infinite
+    BlueprintGeneralTools: 4294967295 # Infinite
+    BlueprintToolboxes: 4294967295 # Infinite
+    BlueprintToolsBasic: 4294967295 # Infinite
+    BlueprintToolsDevices: 4294967295 # Infinite
+    BlueprintToolsAtmos: 4294967295 # Infinite
     BlueprintTopicals: 4294967295 # Infinite
     BlueprintChemistryBasic: 4294967295 # Infinite
     BlueprintChemistryAdvanced: 4294967295 # Infinite
@@ -11,6 +18,22 @@
     BlueprintSurgery: 4294967295 # Infinite
     BlueprintMedicalMobility: 4294967295 # Infinite
     BlueprintMedikit: 4294967295 # Infinite
+
+- type: vendingMachineInventory
+  id: VendingMachineBlueprintGeneral
+  startingInventory:
+    BlueprintAirTanks: 20
+    BlueprintGlowsticks: 20
+    BlueprintGeneralTools: 50
+
+- type: vendingMachineInventory
+  id: VendingMachineBlueprintEngineering
+  startingInventory:
+    BlueprintToolboxes: 20
+    BlueprintToolsBasic: 50
+    BlueprintToolsDevices: 20
+    BlueprintToolsAtmos: 20
+
 
 - type: vendingMachineInventory
   id: VendingMachineBlueprintMedical

@@ -2,7 +2,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintTopicals
-  name: topicals blueprint
+  name: blueprint - topicals
   description: A techfab blueprint. It contains recipes for medical topicals.
   components:
   - type: Blueprint
@@ -16,7 +16,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintChemistryBasic
-  name: basic chemistry blueprint
+  name: blueprint - basic chemistry
   description: A techfab blueprint. It contains recipes for basic chemistry implements.
   components:
   - type: Blueprint
@@ -37,7 +37,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintChemistryAdvanced
-  name: advanced chemistry blueprint
+  name: blueprint - advanced chemistry
   description: A techfab blueprint. It contains recipes for advanced chemistry implements.
   components:
   - type: Blueprint
@@ -56,7 +56,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintSurgery
-  name: surgical implements blueprint
+  name: blueprint - surgical implements
   description: A techfab blueprint. It contains recipes for surgical implements.
   components:
   - type: Blueprint
@@ -73,7 +73,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintMedicalDevices
-  name: medical devices blueprint
+  name: blueprint - medical devices
   description: A techfab blueprint. It contains recipes for electronic medical devices.
   components:
   - type: Blueprint
@@ -93,7 +93,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintMedicalPPE
-  name: medical PPE blueprint
+  name: blueprint - medical PPE
   description: A techfab blueprint. It contains recipes for medical PPE.
   components:
   - type: Blueprint
@@ -107,7 +107,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintMedicalMobility
-  name: medical mobility tool blueprint
+  name: blueprint - medical mobility tools
   description: A techfab blueprint. It contains recipes for roller beds, wheelchairs, and the like.
   components:
   - type: Blueprint
@@ -124,7 +124,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintMedicalGear
-  name: medical equipment blueprint
+  name: blueprint - medical equipment
   description: A techfab blueprint. It contains recipes for medical gear.
   components:
   - type: Blueprint
@@ -140,7 +140,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintMedicalClothing
-  name: medical clothing blueprint
+  name: blueprint - medical clothing
   description: A techfab blueprint. It contains recipes for medical clothing.
   components:
   - type: Blueprint
@@ -155,7 +155,7 @@
 - type: entity
   parent: BaseBlueprintLightBlue
   id: BlueprintMedikit
-  name: empty medikit blueprint
+  name: blueprint - empty medikits
   description: A techfab blueprint. It contains recipes for medikits (contents not included).
   components:
   - type: Blueprint

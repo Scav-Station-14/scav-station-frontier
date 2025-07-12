@@ -1,0 +1,61 @@
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolboxes
+  name: blueprint - toolboxes
+  description: A techfab blueprint. It contains recipes for toolboxes (contents not included).
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - UtilityBelt
+      - ToolboxArtisticNF
+      - ToolboxElectricalNF
+      - ToolboxMechanicalNF
+      - ToolboxEmergencyNF
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsBasic
+  name: blueprint - tools (basic)
+  description: A techfab blueprint. It contains recipes for basic tools such as wrenches and crowbars.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - UtilityBelt
+      - Wirecutter
+      - Screwdriver
+      - Wrench
+      - Crowbar
+  - type: StaticPrice
+    price: 75
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsDevices
+  name: blueprint - tools (devices)
+  description: A techfab blueprint. It contains recipes for engineering devices such as multitools.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - UtilityBelt
+      - PowerCellSmall
+      - Multitool
+      - NetworkConfigurator
+      - TRayScanner
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsAtmos
+  name: blueprint - tools (atmospherics devices)
+  description: A techfab blueprint. It contains recipes for atmospherics scanners.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - PowerCellSmall
+      - GasAnalyzer #might want this in an eva/atmos toolkit as well?
+      - GasDepositLocator
+  - type: StaticPrice
+    price: 50

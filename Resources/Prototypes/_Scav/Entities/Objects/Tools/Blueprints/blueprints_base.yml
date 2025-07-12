@@ -1,9 +1,9 @@
 - type: entity
   parent: NFBaseBlueprint #Shop blueprints shouldnt be faxable
-  id: BlueprintBlue
+  id: BaseBlueprintBlue
   name: general blueprint
   description: A blueprint containing techfab schematics.
-  categories: [HideSpawnMenu, DoNotMap]
+  categories: [HideSpawnMenu]
   components:
   - type: Sprite
     layers:
@@ -38,10 +38,10 @@
 #Engineering
 - type: entity
   parent: NFBaseBlueprint
-  id: BlueprintYellow
+  id: BaseBlueprintYellow
   name: engineering blueprint
   description: A blueprint containing techfab schematics.
-  categories: [HideSpawnMenu, DoNotMap]
+  categories: [HideSpawnMenu]
   components:
   - type: Sprite
     layers:
@@ -76,10 +76,10 @@
 #Botany
 - type: entity
   parent: NFBaseBlueprint #Shop blueprints shouldnt be faxable
-  id: BlueprintGreen
+  id: BaseBlueprintGreen
   name: general blueprint
   description: A blueprint containing techfab schematics.
-  categories: [HideSpawnMenu, DoNotMap]
+  categories: [HideSpawnMenu]
   components:
   - type: Sprite
     layers:
@@ -117,7 +117,7 @@
   id: BaseBlueprintPurple
   name: general blueprint
   description: A blueprint containing techfab schematics.
-  categories: [HideSpawnMenu, DoNotMap]
+  categories: [HideSpawnMenu]
   components:
   - type: Sprite
     layers:
@@ -155,7 +155,7 @@
   id: BaseBlueprintBrown
   name: general blueprint
   description: A blueprint containing techfab schematics.
-  categories: [HideSpawnMenu, DoNotMap]
+  categories: [HideSpawnMenu]
   components:
   - type: Sprite
     layers:
@@ -193,7 +193,7 @@
   id: BaseBlueprintLightBlue
   name: general blueprint
   description: A blueprint containing techfab schematics.
-  categories: [HideSpawnMenu, DoNotMap]
+  categories: [HideSpawnMenu]
   components:
   - type: Sprite
     layers:

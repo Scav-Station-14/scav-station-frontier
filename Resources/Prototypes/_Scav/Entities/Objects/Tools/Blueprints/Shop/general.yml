@@ -1,0 +1,60 @@
+- type: entity
+  parent: BaseBlueprintBlue
+  id: BlueprintAirTanks
+  name: blueprint - air tanks
+  description: A techfab blueprint. It contains recipes for air tanks.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - AirTank
+      - OxygenTank
+      - NigrogenTank
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintBlue
+  id: BlueprintGlowsticks
+  name: blueprint - glowsticks
+  description: A techfab blueprint. It contains recipes for glowsticks.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - GlowstickBlue
+      - GlowstickBase
+      - GlowstickPurple
+      - GlowstickRedLathe
+      - GlowstickYellow
+  - type: StaticPrice
+    price: 25
+
+- type: entity
+  parent: BaseBlueprintBlue
+  id: BlueprintGeneralTools
+  name: blueprint - general tools
+  description: A techfab blueprint. It contains recipes for a suite of important tools.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - PowerCellSmall
+      - FlashlightLantern
+      - AppraisalTool
+      - HandLabeler
+      - FireExtinguisher
+  - type: StaticPrice
+    price: 50 #lower than it should be but i want players to actually pick this up
+
+
+#OMITTED FROM EXISTING TECHFAB RECIPES
+    # - ClothingHeadHatCone
+    # - NFFlash
+
+
+    # - Holoprojector
+    # - HolofanProjector #these are a bit too high-tech, id prefer inflatables, these can be science rewards
+
+
+    # - ClothingOuterEVASuitEngineer
+    # - ClothingOuterEVASuitAtmosTech
+    # - ClothingOuterEVASuitCargo
+    # - ClothingOuterEVASuitSalvage
