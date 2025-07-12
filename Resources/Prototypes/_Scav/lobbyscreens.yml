@@ -25,3 +25,35 @@
 - type: lobbyBackground
   id: Matrimony
   background: /Textures/_Scav/LobbyScreens/Matrimony.webp
+
+- type: lobbyBackground
+  id: Blob
+  background: /Textures/_Scav/LobbyScreens/Blob_Invader.webp
+  
+- type: lobbyBackground
+  id: Droid
+  background: /Textures/_Scav/LobbyScreens/YingDroid.webp
+
+- type: lobbyBackground
+  id: NSFW
+  background: /Textures/_Scav/LobbyScreens/chair.webp
+
+- type: lobbyBackground
+  id: Oshaoshit
+  background: /Textures/_Scav/LobbyScreens/elevator.webp
+
+- type: lobbyBackground
+  id: Quinglet
+  background: /Textures/_Scav/LobbyScreens/quing.webp
+
+- type: lobbyBackground
+  id: Ron
+  background: /Textures/_Scav/LobbyScreens/ron_s_shift.webp
+
+- type: lobbyBackground
+  id: Scritch
+  background: /Textures/_Scav/LobbyScreens/scritch.webp
+
+- type: lobbyBackground
+  id: Girth
+  background: /Textures/_Scav/LobbyScreens/where_is_bitcoin.webp
