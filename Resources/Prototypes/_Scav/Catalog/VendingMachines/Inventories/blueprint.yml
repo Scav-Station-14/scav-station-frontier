@@ -33,6 +33,11 @@
     BlueprintSurgery: 4294967295 # Infinite
     BlueprintMedicalMobility: 4294967295 # Infinite
     BlueprintMedikit: 4294967295 # Infinite
+    BlueprintEVABasic: 4294967295 # Infinite
+    BlueprintEVATrackers: 4294967295 # Infinite
+    BlueprintMiningBasic: 4294967295 # Infinite
+    BlueprintMiningAdvanced: 4294967295 # Infinite
+    BlueprintFlares: 4294967295 # Infinite
 
 - type: vendingMachineInventory
   id: VendingMachineBlueprintGeneral
@@ -77,3 +82,13 @@
     BlueprintSurgery: 5
     BlueprintMedicalMobility: 5
     BlueprintMedikit: 5
+
+- type: vendingMachineInventory
+  id: VendingMachineBlueprintSalvage
+  startingInventory:
+    BlueprintEVABasic: 30
+    BlueprintEVATrackers: 30
+    BlueprintMiningBasic: 30
+    BlueprintMiningAdvanced: 30
+    BlueprintFlares: 30
+    BlueprintGlowsticks: 30

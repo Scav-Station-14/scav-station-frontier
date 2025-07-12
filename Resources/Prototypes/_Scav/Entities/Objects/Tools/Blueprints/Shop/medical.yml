@@ -11,7 +11,7 @@
     - Ointment
     - Gauze
   - type: StaticPrice
-    price: 100
+    price: 250
 
 - type: entity
   parent: BaseBlueprintLightBlue
@@ -32,7 +32,7 @@
       - ChemistryEmptyBottle01
       - DiseaseSwab #needs to be somewhere and virology isnt complete
   - type: StaticPrice
-    price: 100
+    price: 150
 
 - type: entity
   parent: BaseBlueprintLightBlue
@@ -68,7 +68,7 @@
       - Saw
       - Hemostat
   - type: StaticPrice
-    price: 50 #surgery isnt very important rn, might as well make this cheaper
+    price: 100 #surgery isnt very important rn, might as well make this cheaper
 
 - type: entity
   parent: BaseBlueprintLightBlue
@@ -102,7 +102,7 @@
       - ClothingHandsGlovesNitrile
       - ClothingMaskSterile
   - type: StaticPrice
-    price: 10
+    price: 50
 
 - type: entity
   parent: BaseBlueprintLightBlue
@@ -118,7 +118,7 @@
       - VehicleWheelchairFolded
       - WhiteCane
   - type: StaticPrice
-    price: 100
+    price: 450
 
 
 - type: entity
@@ -135,7 +135,7 @@
       - BeltMedical
       - CraftMedicalBag
   - type: StaticPrice
-    price: 100
+    price: 350
 
 - type: entity
   parent: BaseBlueprintLightBlue
@@ -150,7 +150,7 @@
       - UniformScrubsColorPurple
       - ClothingOuterHospitalGown
   - type: StaticPrice
-    price: 20
+    price: 100
 
 - type: entity
   parent: BaseBlueprintLightBlue
@@ -169,4 +169,4 @@
       - MedkitRadiation
       - MedkitCombat
   - type: StaticPrice
-    price: 5
+    price: 50

@@ -10,7 +10,7 @@
       - OxygenTank
       - NigrogenTank
   - type: StaticPrice
-    price: 100
+    price: 200
 
 - type: entity
   parent: BaseBlueprintBlue
@@ -26,7 +26,7 @@
       - GlowstickRedLathe
       - GlowstickYellow
   - type: StaticPrice
-    price: 50
+    price: 75
 
 - type: entity
   parent: BaseBlueprintBlue
@@ -44,6 +44,19 @@
   - type: StaticPrice
     price: 50 #lower than it should be but i want players to actually pick this up
 
+
+- type: entity
+  parent: BaseBlueprintBlue
+  id: BlueprintSprayPainter
+  name: blueprint - spray painter
+  description: A techfab blueprint. It contains recipes for a spray painter.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - SprayPainter
+      - SprayPainterAmmo
+  - type: StaticPrice
+    price: 350 #anti-sharah pricing
 
 #OMITTED FROM EXISTING TECHFAB RECIPES
     # - ClothingHeadHatCone

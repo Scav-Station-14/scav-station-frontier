@@ -13,7 +13,7 @@
       - ToolboxEmergencyNF
       - ConstructionBag
   - type: StaticPrice
-    price: 20
+    price: 40
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -29,7 +29,7 @@
       - Wrench
       - Crowbar
   - type: StaticPrice
-    price: 100
+    price: 200
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -45,7 +45,7 @@
       - NetworkConfigurator
       - TRayScanner
   - type: StaticPrice
-    price: 120
+    price: 240
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -59,7 +59,7 @@
       - GasAnalyzer #might want this in an eva/atmos toolkit as well?
       - GasDepositLocator
   - type: StaticPrice
-    price: 75
+    price: 120
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -73,7 +73,7 @@
       - ClothingHeadHatWelding
       - ClothingMaskWeldingGas
   - type: StaticPrice
-    price: 50
+    price: 120
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -88,7 +88,21 @@
       - ClothingHeadHatWelding
       - ClothingMaskWeldingGas
   - type: StaticPrice
-    price: 120
+    price: 500
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsSignaller
+  name: blueprint - signaller
+  description: A techfab blueprint. It contains recipes for a signaller.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - PowerCellSmall
+      - SignalTimerElectronics
+      - Signaller
+  - type: StaticPrice
+    price: 100
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -101,7 +115,7 @@
       - PowerCellSmall
       - PowerCellMedium
   - type: StaticPrice
-    price: 100
+    price: 200
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -115,7 +129,7 @@
       - CableMVStack
       - CableHVStack
   - type: StaticPrice
-    price: 50
+    price: 100
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -137,7 +151,7 @@
       - DimLightBulb
       - WarmLightBulb
   - type: StaticPrice
-    price: 100
+    price: 150
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -155,7 +169,7 @@
       - NFSheetUGlass1Processed
       - NFSheetRUGlass1Processed
   - type: StaticPrice
-    price: 170
+    price: 4000
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -173,7 +187,7 @@
       - Igniter
       - ConveyorBeltAssembly
   - type: StaticPrice
-    price: 100
+    price: 200
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -191,7 +205,7 @@
       - PortableGeneratorSuperPacmanMachineCircuitboard
       - PortableGeneratorJrPacmanMachineCircuitboard
   - type: StaticPrice
-    price: 100
+    price: 400
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -208,7 +222,7 @@
       - GyroscopeMachineCircuitboard
       - MiniGravityGeneratorCircuitboard
   - type: StaticPrice
-    price: 100
+    price: 500
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -222,7 +236,7 @@
       - StationMapElectronics
       - MiniStationAnchorCircuitboard
   - type: StaticPrice
-    price: 75
+    price: 200
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -236,7 +250,7 @@
       - PortableScrubberMachineCircuitBoard
       - ThermomachineFreezerMachineCircuitBoard
   - type: StaticPrice
-    price: 75
+    price: 200
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -250,7 +264,7 @@
       - FireAlarmElectronics
       - IntercomElectronics
   - type: StaticPrice
-    price: 75
+    price: 200
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -263,7 +277,7 @@
       - FirelockElectronics
       - DoorElectronics
   - type: StaticPrice
-    price: 50
+    price: 200
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -276,7 +290,7 @@
       - BorgChargerCircuitboard
       - WeaponCapacitorRechargerCircuitboard
   - type: StaticPrice
-    price: 50
+    price: 200
 
 - type: entity
   parent: BaseBlueprintYellow
@@ -286,7 +300,8 @@
   components:
   - type: Blueprint
     providedRecipes:
-      - FirelockElectronics
-      - DoorElectronics
+      - SolarControlComputerCircuitboard
+      - SolarTrackerElectronics
+      - SolarAssemblyFlatpack
   - type: StaticPrice
-    price: 170
+    price: 750
