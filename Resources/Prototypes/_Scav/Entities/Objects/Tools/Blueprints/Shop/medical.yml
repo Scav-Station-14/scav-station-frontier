@@ -118,7 +118,7 @@
       - VehicleWheelchairFolded
       - WhiteCane
   - type: StaticPrice
-    price: 450
+    price: 350
 
 
 - type: entity
@@ -135,7 +135,7 @@
       - BeltMedical
       - CraftMedicalBag
   - type: StaticPrice
-    price: 350
+    price: 250
 
 - type: entity
   parent: BaseBlueprintLightBlue

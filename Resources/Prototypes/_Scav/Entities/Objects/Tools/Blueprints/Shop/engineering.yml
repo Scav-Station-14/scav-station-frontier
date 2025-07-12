@@ -169,7 +169,7 @@
       - NFSheetUGlass1Processed
       - NFSheetRUGlass1Processed
   - type: StaticPrice
-    price: 4000
+    price: 600
 
 - type: entity
   parent: BaseBlueprintYellow

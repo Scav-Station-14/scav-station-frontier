@@ -3,14 +3,13 @@
   id: VendingMachineBlueprint
   name: FabVend
   description: A vendor selling blueprints for techfabs.
+  categories: [HideSpawnMenu]
   components:
   - type: VendingMachine
     pack: EmptyVendingMachineInventory #will be filled in by child versions
     offState: off
     brokenState: broken
     normalState: normal-unshaded
-    ejectState: eject-unshaded
-    denyState: deny-unshaded
     ejectDelay: 2.1
   #- type: Advertise
   #  pack: FuelVendAds
@@ -43,8 +42,20 @@
     offState: off
     brokenState: broken
     normalState: normal-unshaded
-    ejectState: eject-unshaded
-    denyState: deny-unshaded
+    ejectDelay: 2.1
+
+#General
+- type: entity
+  parent: VendingMachineBlueprint
+  id: VendingMachineBlueprintGeneral
+  name: General FabVend
+  description: A vendor selling blueprints for techfabs. This one stocks general-purpose blueprints.
+  components:
+  - type: VendingMachine
+    pack: VendingMachineBlueprintGeneral
+    offState: off
+    brokenState: broken
+    normalState: unshaded_blue
     ejectDelay: 2.1
 
 #Medical
@@ -58,7 +69,33 @@
     pack: VendingMachineBlueprintMedical
     offState: off
     brokenState: broken
-    normalState: normal-unshaded
-    ejectState: eject-unshaded
-    denyState: deny-unshaded
+    normalState: unshaded_lightblue
+    ejectDelay: 2.1
+
+#Engineering
+- type: entity
+  parent: VendingMachineBlueprint
+  id: VendingMachineBlueprintEngineering
+  name: Engineering FabVend
+  description: A vendor selling blueprints for techfabs. This one stocks engineering blueprints.
+  components:
+  - type: VendingMachine
+    pack: VendingMachineBlueprintEngineering
+    offState: off
+    brokenState: broken
+    normalState: unshaded_yellow
+    ejectDelay: 2.1
+
+#Salvage
+- type: entity
+  parent: VendingMachineBlueprint
+  id: VendingMachineBlueprintSalvage
+  name: Salvage FabVend
+  description: A vendor selling blueprints for techfabs. This one stocks salvage blueprints.
+  components:
+  - type: VendingMachine
+    pack: VendingMachineBlueprintSalvage
+    offState: off
+    brokenState: broken
+    normalState: unshaded_brown
     ejectDelay: 2.1

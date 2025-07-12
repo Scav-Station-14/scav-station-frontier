@@ -6,8 +6,15 @@
     Steel: 300
 
 - type: latheRecipe
-  id: NigrogenTank
-  result: NigrogenTank
+  id: NitrogenTank
+  result: NitrogenTank
   completetime: 4
   materials:
     Steel: 300
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: Crowbar
+  result: Crowbar
+  materials:
+    Steel: 200

@@ -29,7 +29,7 @@
       - ClothingNeckIFFOrange
       - ClothingNeckIFFPurple
   - type: StaticPrice
-    price: 300
+    price: 250
 
 - type: entity
   parent: BaseBlueprintYellow

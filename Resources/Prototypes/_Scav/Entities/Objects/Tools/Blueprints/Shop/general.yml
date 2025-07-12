@@ -8,7 +8,7 @@
     providedRecipes:
       - AirTank
       - OxygenTank
-      - NigrogenTank
+      - NitrogenTank
   - type: StaticPrice
     price: 200
 
