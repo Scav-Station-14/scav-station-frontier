@@ -1,0 +1,54 @@
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherGeneral
+  name: Shipyard Voucher
+  description: Allows for one free ship purchase. Destroyed on sale.
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: vouchergeneral
+  - type: Item
+    heldPrefix: blue
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: Shipyard
+    accessGroups:
+    - GeneralAccess
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherMedical
+  name: Medical Ship Voucher
+  description: Allows for one free medical ship purchase. Destroyed on sale.
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: vouchermedic
+  - type: Item
+    heldPrefix: blue
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: Medical
+    accessGroups:
+    - GeneralAccess
+
+- type: entity
+  parent: BaseShipVoucher
+  id: ShipVoucherIvenmoth
+  name: Shipyard Voucher
+  description: Per the Tradehouse's arrangement with Nanotrasen, all Tradehouse employees are afforded a free ship purchase.
+  components:
+  - type: Sprite
+    sprite: _Scav/Objects/Misc/shipyard_voucher.rsi
+    layers:
+    - state: ivenmoth
+    - state: voucherivenmoth
+  - type: Item
+    heldPrefix: ivenmoth
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: Shipyard
+    accessGroups:
+    - GeneralAccess

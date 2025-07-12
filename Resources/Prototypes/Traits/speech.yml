@@ -29,43 +29,43 @@
   components:
   - type: SouthernAccent
 
-- type: trait
-  id: PirateAccent
-  name: trait-pirate-accent-name
-  description: trait-pirate-accent-desc
-  category: SpeechTraits
-  cost: 1
-  components:
-  - type: PirateAccent
+# - type: trait
+#   id: PirateAccent
+#   name: trait-pirate-accent-name
+#   description: trait-pirate-accent-desc
+#   category: SpeechTraits
+#   cost: 1
+#   components:
+#   - type: PirateAccent
 
-- type: trait
-  id: CowboyAccent
-  name: trait-cowboy-name
-  description: trait-cowboy-desc
-  category: SpeechTraits
-  cost: 1
-  components:
-  - type: ReplacementAccent
-    accent: cowboy
+# - type: trait
+#   id: CowboyAccent
+#   name: trait-cowboy-name
+#   description: trait-cowboy-desc
+#   category: SpeechTraits
+#   cost: 1
+#   components:
+#   - type: ReplacementAccent
+#     accent: cowboy
 
-- type: trait
-  id: GermanAccent
-  name: trait-german-name
-  description: trait-german-desc
-  category: SpeechTraits
-  cost: 1
-  components:
-  - type: GermanAccent
+# - type: trait
+#   id: GermanAccent
+#   name: trait-german-name
+#   description: trait-german-desc
+#   category: SpeechTraits
+#   cost: 1
+#   components:
+#   - type: GermanAccent
 
-- type: trait
-  id: ItalianAccent
-  name: trait-italian-name
-  description: trait-italian-desc
-  category: SpeechTraits
-  cost: 1
-  components:
-  - type: ReplacementAccent
-    accent: italian
+# - type: trait
+#   id: ItalianAccent
+#   name: trait-italian-name
+#   description: trait-italian-desc
+#   category: SpeechTraits
+#   cost: 1
+#   components:
+#   - type: ReplacementAccent
+#     accent: italian
 
 - type: trait
   id: FrenchAccent
@@ -76,24 +76,24 @@
   components:
   - type: FrenchAccent
 
-- type: trait
-  id: SpanishAccent
-  name: trait-spanish-name
-  description: trait-spanish-desc
-  category: SpeechTraits
-  cost: 1
-  components:
-  - type: SpanishAccent
+# - type: trait #i could be convinced to reinstate this, its not _quite_ as aggressive
+#   id: SpanishAccent
+#   name: trait-spanish-name
+#   description: trait-spanish-desc
+#   category: SpeechTraits
+#   cost: 1
+#   components:
+#   - type: SpanishAccent
 
-- type: trait
-  id: Liar
-  name: trait-liar-name
-  description: trait-liar-desc
-  category: SpeechTraits
-  cost: 1
-  components:
-  - type: ReplacementAccent
-    accent: liar
+# - type: trait
+#   id: Liar
+#   name: trait-liar-name
+#   description: trait-liar-desc
+#   category: SpeechTraits
+#   cost: 1
+#   components:
+#   - type: ReplacementAccent
+#     accent: liar
 
 # 2 Cost
 

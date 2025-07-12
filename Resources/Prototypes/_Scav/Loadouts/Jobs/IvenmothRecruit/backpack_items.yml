@@ -1,0 +1,6 @@
+- type: loadout
+  id: IvenmothRecruitShipVoucher
+  price: 0
+  storage:
+    back:
+    - ShipVoucherIvenmoth

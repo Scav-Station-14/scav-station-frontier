@@ -12,6 +12,7 @@
         - type: StationJobs
           availableJobs:
             Contractor: [ -1, -1 ]
+            IvenmothRecruit: [ -1, -1 ] #Scav
             Pilot: [ -1, -1 ]
             Mercenary: [ -1, -1 ]
             Borg: [ -1, -1]

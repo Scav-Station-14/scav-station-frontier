@@ -31,6 +31,7 @@
   # - Zookeeper # Frontier
   # - ServiceWorker # Frontier
   - Contractor # Frontier
+  - IvenmothRecruit # Scav
   - Mercenary # Frontier
   - Pilot # Frontier
   - Borg # Frontier

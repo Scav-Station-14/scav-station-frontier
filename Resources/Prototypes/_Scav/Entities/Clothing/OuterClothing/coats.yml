@@ -1,0 +1,31 @@
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ClothingOuterCoatTradehouse
+  name: tradehouse redcoat
+  description: The signature uniform of Tradehouse Ivenmoth.
+  components:
+  - type: Sprite
+    sprite: _Scav/Clothing/OuterClothing/Coats/tradehouseredcoat.rsi
+  - type: Clothing
+    sprite: _Scav/Clothing/OuterClothing/Coats/tradehouseredcoat.rsi
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatTradehouse]
+  id: ClothingOuterCoatTradehouseOpened
+  name: tradehouse redcoat
+
+- type: entity
+  parent: ClothingOuterStorageFoldableBase
+  id: ClothingOuterCoatTradehouseOfficer
+  name: tradehouse officer redcoat
+  description: The signature uniform of Tradehouse Ivenmoth. The gold markings and badge mark its wearer as an officer.
+  components:
+  - type: Sprite
+    sprite: _Scav/Clothing/OuterClothing/Coats/tradehouseredcoat_officer.rsi
+  - type: Clothing
+    sprite: _Scav/Clothing/OuterClothing/Coats/tradehouseredcoat_officer.rsi
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatTradehouseOfficer]
+  id: ClothingOuterCoatTradehouseOfficerOpened
+  name: tradehouse officer redcoat

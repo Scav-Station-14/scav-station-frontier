@@ -1,0 +1,38 @@
+# - type: loadoutGroup
+#   id: IvenmothRecruitJumpsuit
+#   name: loadout-group-contractor-jumpsuit
+#   subgroups:
+#   - ContractorJumpsuit
+#   fallbacks:
+#   - ContractorClothingUniformJumpsuitColorGrey
+#   - ContractorClothingUniformJumpskirtColorGrey
+
+- type: loadoutGroup
+  id: IvenmothRecruitOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - IvenmothRecruitClothingOuterCoatTradehouse
+  - IvenmothRecruitClothingOuterCoatTradehouseOfficer
+  subgroups:
+  - ContractorOuterClothing
+
+# - type: loadoutGroup
+#   id: IvenmothRecruitPDA
+#   name: loadout-group-contractor-pda
+#   subgroups:
+#   - ContractorPDA
+#   fallbacks:
+#   - ContractorClearNFPDA
+
+- type: loadoutGroup
+  id: IvenmothRecruitBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+    - IvenmothRecruitShipVoucher
+  subgroups:
+    - ContractorBackpackItems
+  fallbacks:
+    - IvenmothRecruitShipVoucher

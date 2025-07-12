@@ -1,0 +1,25 @@
+# Contractor
+- type: roleLoadout
+  id: JobIvenmothRecruit
+  groups:
+  - ContractorHead
+  - ContractorNeck
+  - ContractorJumpsuit
+  - ContractorGloves
+  - ContractorBackpack
+  - IvenmothRecruitOuterClothing
+  - ContractorForcedOuterClothing
+  - ContractorShoes
+  - ContractorFace
+  - ContractorGlasses
+  - ContractorBelt
+  - ContractorEars
+  - ContractorEncryptionKey
+  - ContractorBoxSurvival
+  - ContractorPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - IvenmothRecruitBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific

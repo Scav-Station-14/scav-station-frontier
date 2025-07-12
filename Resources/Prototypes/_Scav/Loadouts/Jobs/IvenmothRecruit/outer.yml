@@ -1,0 +1,20 @@
+- type: loadout
+  id: IvenmothRecruitClothingOuterCoatTradehouse
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ClothingOuterCoatTradehouse
+
+- type: loadout
+  id: IvenmothRecruitClothingOuterCoatTradehouseOfficer
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 1000
+  equipment:
+    outerClothing: ClothingOuterCoatTradehouseOfficer

@@ -1,0 +1,14 @@
+- type: job
+  id: IvenmothRecruit
+  name: job-name-ivenmothrecruit
+  description: job-description-contractor
+  playTimeTracker: JobIvenmothRecruit
+  icon: "JobIconIvenmothRecruit"
+  supervisors: job-supervisors-hire
+  displayWeight: 35 # Between Contractor and Pilot
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
