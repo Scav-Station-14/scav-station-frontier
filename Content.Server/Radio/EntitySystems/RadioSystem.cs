@@ -17,6 +17,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
+using Robust.Shared.Physics;
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -31,6 +32,8 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
+
+    [Dependency] private readonly SharedTransformSystem _transform = default!; //Scav
 
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
@@ -147,8 +150,11 @@ public sealed class RadioSystem : EntitySystem
         RaiseLocalEvent(radioSource, ref sendAttemptEv);
         var canSend = !sendAttemptEv.Cancelled;
 
+        // Scav: using new override
         var sourceMapId = Transform(radioSource).MapID;
-        var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
+        var sourceTransform = Transform(radioSource);
+        var hasActiveServer = HasActiveServer(sourceTransform, channel.ID);
+        //End Scav
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
@@ -211,4 +217,42 @@ public sealed class RadioSystem : EntitySystem
         }
         return false;
     }
+
+    //Scav: new override
+    private bool HasActiveServer(TransformComponent radioTransform, string channelId) //long term, non long-range channels should be filtered both by available encryption keys, AND the uid of the servers in range (possibly as a list of uids). this will likely require this funcitonality to move
+    {
+        var servers = EntityQuery<TelecomServerComponent, EncryptionKeyHolderComponent, ApcPowerReceiverComponent, TransformComponent>();
+        foreach (var (server, keys, power, serverTransform) in servers)
+        {
+            if (serverTransform.MapID == radioTransform.MapID &&
+                (_transform.GetMapCoordinates(radioTransform).Position - _transform.GetMapCoordinates(serverTransform).Position).Length() <= server.range &&
+                power.Powered &&
+                keys.Channels.Contains(channelId))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private List<EntityUid> GetActiveServers(TransformComponent radioTransform, string channelId) //long term, non long-range channels should be filtered both by available encryption keys, AND the uid of the servers in range (possibly as a list of uids). this will likely require this funcitonality to move
+    {
+        var serverQuery = EntityQueryEnumerator<TelecomServerComponent, EncryptionKeyHolderComponent, ApcPowerReceiverComponent, TransformComponent>();
+
+        List<EntityUid> activeServers = new List<EntityUid>();
+
+        while (serverQuery.MoveNext (out var uid, out var server, out var keys, out var power, out var serverTransform))
+        {
+            if (serverTransform.MapID == radioTransform.MapID &&
+                (_transform.GetMapCoordinates(radioTransform).Position - _transform.GetMapCoordinates(serverTransform).Position).Length() <= server.range &&
+                power.Powered &&
+                keys.Channels.Contains(channelId))
+            {
+                activeServers.Add(uid);
+            }
+        }
+
+        return activeServers;
+    }
+    // End Scav
 }

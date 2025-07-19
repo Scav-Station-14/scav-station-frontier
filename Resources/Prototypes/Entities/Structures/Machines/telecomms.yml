@@ -64,6 +64,7 @@
     keysExtractionMethod: Prying
     keySlots: 10
   - type: TelecomServer
+    range: 5
   - type: ContainerContainer
     containers:
       key_slots: !type:Container
