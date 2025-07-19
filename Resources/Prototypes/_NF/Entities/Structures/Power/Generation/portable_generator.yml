@@ -85,7 +85,7 @@
       targetPower: 60000
       optimalPower: 60000
       # ~22 minutes per stack at full power - 80 kJ per stack, 240 kJ per 30 units
-      optimalBurnRate: 0.0075
+      optimalBurnRate: 0.0025 #Scav: 0.0075 < 0.0025
       # leaky, worse power curve
       fuelEfficiencyConstant: 0.5
       radiationColor: "#00bfff"
