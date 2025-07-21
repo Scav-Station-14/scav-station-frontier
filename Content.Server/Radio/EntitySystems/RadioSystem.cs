@@ -18,6 +18,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
 using Robust.Shared.Physics;
+using System.Linq;
 
 namespace Content.Server.Radio.EntitySystems;
 
@@ -153,7 +154,7 @@ public sealed class RadioSystem : EntitySystem
         // Scav: using new override
         var sourceMapId = Transform(radioSource).MapID;
         var sourceTransform = Transform(radioSource);
-        var hasActiveServer = HasActiveServer(sourceTransform, channel.ID);
+        var sourceActiveServers = GetActiveServers(sourceTransform, channel.ID);
         //End Scav
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
@@ -179,7 +180,14 @@ public sealed class RadioSystem : EntitySystem
 
             // don't need telecom server for long range channels or handheld radios and intercoms
             var needServer = !channel.LongRange && !sourceServerExempt;
-            if (needServer && !hasActiveServer)
+            if (needServer && sourceActiveServers.Count == 0)
+                continue;
+
+            var recieverServerExempt = _exemptQuery.HasComp(receiver);
+            var recieverNeedServer = !channel.LongRange && !recieverServerExempt;
+            var recieverActiveServers = GetActiveServers(transform, channel.ID);
+
+            if (recieverNeedServer && !(sourceActiveServers.Intersect(recieverActiveServers).Any()))
                 continue;
 
             // check if message can be sent to specific receiver
@@ -235,13 +243,13 @@ public sealed class RadioSystem : EntitySystem
         return false;
     }
 
-    private List<EntityUid> GetActiveServers(TransformComponent radioTransform, string channelId) //long term, non long-range channels should be filtered both by available encryption keys, AND the uid of the servers in range (possibly as a list of uids). this will likely require this funcitonality to move
+    private List<EntityUid> GetActiveServers(TransformComponent radioTransform, string channelId) //may want to make this a list of <telecomservercomponent, transformcomponent> instead of uid. we dont actually need the uids if we dont call this for both sender and reciever and just iterate over what the sender found
     {
         var serverQuery = EntityQueryEnumerator<TelecomServerComponent, EncryptionKeyHolderComponent, ApcPowerReceiverComponent, TransformComponent>();
 
         List<EntityUid> activeServers = new List<EntityUid>();
 
-        while (serverQuery.MoveNext (out var uid, out var server, out var keys, out var power, out var serverTransform))
+        while (serverQuery.MoveNext(out var uid, out var server, out var keys, out var power, out var serverTransform))
         {
             if (serverTransform.MapID == radioTransform.MapID &&
                 (_transform.GetMapCoordinates(radioTransform).Position - _transform.GetMapCoordinates(serverTransform).Position).Length() <= server.range &&
@@ -254,5 +262,4 @@ public sealed class RadioSystem : EntitySystem
 
         return activeServers;
     }
-    // End Scav
 }
