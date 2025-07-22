@@ -1,0 +1,20 @@
+- type: latheRecipe
+  id: OxygenTank
+  result: OxygenTank
+  completetime: 4
+  materials:
+    Steel: 300
+
+- type: latheRecipe
+  id: NitrogenTank
+  result: NitrogenTank
+  completetime: 4
+  materials:
+    Steel: 300
+
+- type: latheRecipe
+  parent: BaseToolRecipe
+  id: Crowbar
+  result: Crowbar
+  materials:
+    Steel: 200

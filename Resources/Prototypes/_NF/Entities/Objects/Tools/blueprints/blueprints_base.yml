@@ -160,6 +160,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintAutolathe #Scav
     - NFBlueprintEngineeringTechfab
     - Document
     - Paper
@@ -198,6 +199,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintAutolathe #Scav
     - NFBlueprintSalvageTechfab
     - Document
     - Paper
@@ -236,6 +238,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintAutolathe #Scav
     - NFBlueprintProtolathe
     - Document
     - Paper
@@ -274,6 +277,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintAutolathe #Scav
     - NFBlueprintServiceTechfab
     - Document
     - Paper
@@ -312,6 +316,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintAutolathe #Scav
     - NFBlueprintMedicalTechfab
     - Document
     - Paper
@@ -350,6 +355,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintAutolathe #Scav
     - NFBlueprintMercenaryTechfab
     - Document
     - Paper
@@ -387,6 +393,7 @@
       - state: inhand-right-text
   - type: Tag
     tags:
+    - BlueprintAutolathe #Scav
     - NFBlueprintNfsdTechfab
     - Document
     - Paper
@@ -441,6 +448,7 @@
         color: "#db7372"
   - type: Tag
     tags:
+    - BlueprintAutolathe #Scav
     - NFBlueprintSalvageTechfab
     - Document
     - Paper
@@ -479,6 +487,7 @@
         color: "#db7372"
   - type: Tag
     tags:
+    - BlueprintAutolathe #Scav
     - NFBlueprintMercenaryTechfab
     - NFBlueprintNfsdTechfab
     - Document

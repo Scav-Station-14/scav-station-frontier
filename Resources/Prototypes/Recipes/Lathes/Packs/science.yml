@@ -9,6 +9,7 @@
   - ExosuitFabricatorMachineCircuitboard
   - CutterMachineCircuitboard
   - BorgChargerCircuitboard
+  - TechFabMachineCircuitboard #Scav
 
 - type: latheRecipePack
   id: CircuitFloorsStatic

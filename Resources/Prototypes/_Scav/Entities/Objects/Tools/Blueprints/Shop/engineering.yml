@@ -1,0 +1,307 @@
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolboxes
+  name: blueprint - toolboxes
+  description: A techfab blueprint. It contains recipes for toolboxes (contents not included).
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - UtilityBelt
+      - ToolboxArtisticNF
+      - ToolboxElectricalNF
+      - ToolboxMechanicalNF
+      - ToolboxEmergencyNF
+      - ConstructionBag
+  - type: StaticPrice
+    price: 40
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsBasic
+  name: blueprint - tools (basic)
+  description: A techfab blueprint. It contains recipes for basic tools such as wrenches and crowbars.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - UtilityBelt
+      - Wirecutter
+      - Screwdriver
+      - Wrench
+      - Crowbar
+  - type: StaticPrice
+    price: 200
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsDevices
+  name: blueprint - tools (devices)
+  description: A techfab blueprint. It contains recipes for engineering devices such as multitools.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - UtilityBelt
+      - PowerCellSmall
+      - Multitool
+      - NetworkConfigurator
+      - TRayScanner
+  - type: StaticPrice
+    price: 240
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsAtmos
+  name: blueprint - tools (atmospherics)
+  description: A techfab blueprint. It contains recipes for atmospherics scanners.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - PowerCellSmall
+      - GasAnalyzer #might want this in an eva/atmos toolkit as well?
+      - GasDepositLocator
+  - type: StaticPrice
+    price: 120
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsWelder
+  name: blueprint - tools (welder)
+  description: A techfab blueprint. It contains recipes for welding tools.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - Welder
+      - ClothingHeadHatWelding
+      - ClothingMaskWeldingGas
+  - type: StaticPrice
+    price: 120
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsWelderAdvanced
+  name: blueprint - tools (welder, advanced)
+  description: A techfab blueprint. It contains recipes for advanced welding tools.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - WelderIndustrial
+      - WelderIndustrialAdvanced
+      - ClothingHeadHatWelding
+      - ClothingMaskWeldingGas
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintToolsSignaller
+  name: blueprint - signaller
+  description: A techfab blueprint. It contains recipes for a signaller.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - PowerCellSmall
+      - SignalTimerElectronics
+      - Signaller
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintPowerCells
+  name: blueprint - power cells
+  description: A techfab blueprint. It contains recipes for power cells.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - PowerCellSmall
+      - PowerCellMedium
+  - type: StaticPrice
+    price: 200
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintCabling
+  name: blueprint - cabling
+  description: A techfab blueprint. It contains recipes for power cables.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - CableStack
+      - CableMVStack
+      - CableHVStack
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintLightbulbs
+  name: blueprint - lightbulbs
+  description: A techfab blueprint. It contains recipes for lightbulbs.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - LightReplacer
+      - LightTube
+      - LedLightTube
+      - SodiumLightTube
+      - ExteriorLightTube
+      - LightBulb
+      - LedLightBulb
+      - SodiumLightBulb
+      - ExteriorLightBulb
+      - DimLightBulb
+      - WarmLightBulb
+  - type: StaticPrice
+    price: 150
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintAdvancedMaterials
+  name: blueprint - advanced materials
+  description: A techfab blueprint. It contains recipes for advanced materials.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - Durathread
+      - NFSheetRGlassProcessed
+      - NFSheetPGlass1Processed
+      - NFSheetRPGlass1Processed
+      - NFSheetPlasteel1Processed
+      - NFSheetUGlass1Processed
+      - NFSheetRUGlass1Processed
+  - type: StaticPrice
+    price: 600
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintComponentsBasic
+  name: blueprint - basic components
+  description: A techfab blueprint. It contains recipes for basic machine components.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - Beaker
+      - MicroManipulatorStockPart
+      - MatterBinStockPart
+      - CapacitorStockPart
+      - ModularReceiver
+      - Igniter
+      - ConveyorBeltAssembly
+  - type: StaticPrice
+    price: 200
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintElectronicsPowerSupply
+  name: blueprint - electronics (power supply)
+  description: A techfab blueprint. It contains recipes for electronic components.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - APCElectronics
+      - SMESMachineCircuitboard
+      - SubstationMachineCircuitboard
+      - WallmountSubstationElectronics
+      - PortableGeneratorPacmanMachineCircuitboard
+      - PortableGeneratorSuperPacmanMachineCircuitboard
+      - PortableGeneratorJrPacmanMachineCircuitboard
+  - type: StaticPrice
+    price: 400
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintElectronicsShipConstruction
+  name: blueprint - electronics (ship construction)
+  description: A techfab blueprint. It contains recipes for electronic components.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - SmallThrusterMachineCircuitboard
+      - SmallGyroscopeMachineCircuitboard
+      - ShuttleConsoleCircuitboard
+      - ThrusterMachineCircuitboard
+      - GyroscopeMachineCircuitboard
+      - MiniGravityGeneratorCircuitboard
+  - type: StaticPrice
+    price: 500
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintElectronicsLargeVessels
+  name: blueprint - electronics (large vessels)
+  description: A techfab blueprint. It contains recipes for electronic components.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - MailingUnitElectronics
+      - StationMapElectronics
+      - MiniStationAnchorCircuitboard
+  - type: StaticPrice
+    price: 200
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintElectronicsAtmospherics
+  name: blueprint - electronics (atmospherics machines)
+  description: A techfab blueprint. It contains recipes for electronic components.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - GasRecyclerMachineCircuitboard
+      - PortableScrubberMachineCircuitBoard
+      - ThermomachineFreezerMachineCircuitBoard
+  - type: StaticPrice
+    price: 200
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintElectronicsWallPanels
+  name: blueprint - electronics (wall panels)
+  description: A techfab blueprint. It contains recipes for electronic components.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - AirAlarmElectronics
+      - FireAlarmElectronics
+      - IntercomElectronics
+  - type: StaticPrice
+    price: 200
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintElectronicsDoors
+  name: blueprint - electronics (doors)
+  description: A techfab blueprint. It contains recipes for electronic components.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - FirelockElectronics
+      - DoorElectronics
+  - type: StaticPrice
+    price: 200
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintElectronicsRechargers
+  name: blueprint - electronics (rechargers)
+  description: A techfab blueprint. It contains recipes for electronic components.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - BorgChargerCircuitboard
+      - WeaponCapacitorRechargerCircuitboard
+  - type: StaticPrice
+    price: 200
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintElectronicsSolars
+  name: blueprint - electronics (solars)
+  description: A techfab blueprint. It contains recipes for electronic components.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - SolarControlComputerCircuitboard
+      - SolarTrackerElectronics
+      - SolarAssemblyFlatpack
+  - type: StaticPrice
+    price: 750

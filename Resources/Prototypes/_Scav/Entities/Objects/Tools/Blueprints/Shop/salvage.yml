@@ -1,0 +1,76 @@
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintEVABasic
+  name: blueprint - eva tools
+  description: A techfab blueprint. It contains recipes for basic EVA tools.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - FlashlightLantern
+      - WeaponGrapplingGun
+      - SurvivalKnife
+      - ClothingBeltSalvageWebbing
+      - RadioHandheldNF
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintEVATrackers
+  name: blueprint - eva trackers
+  description: A techfab blueprint. It contains recipes for basic EVA gear.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - ClothingNeckIFFNeutral
+      - ClothingNeckIFFGreen
+      - ClothingNeckIFFRed
+      - ClothingNeckIFFBlue
+      - ClothingNeckIFFOrange
+      - ClothingNeckIFFPurple
+  - type: StaticPrice
+    price: 250
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintMiningBasic
+  name: blueprint - basic mining gear
+  description: A techfab blueprint. It contains recipes for basic mining gear.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - LanternNF
+      - OreBag
+      - Pickaxe
+      - SurvivalKnife
+  - type: StaticPrice
+    price: 100
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintMiningAdvanced
+  name: blueprint - advanced mining gear
+  description: A techfab blueprint. It contains recipes for advanced mining gear.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - MiningDrill
+      - NFWeaponPka
+      - NFWeaponPkaCannon
+      - NFMetalShield
+  - type: StaticPrice
+    price: 250
+
+- type: entity
+  parent: BaseBlueprintYellow
+  id: BlueprintFlares
+  name: blueprint - flares
+  description: A techfab blueprint. It contains recipes for flares.
+  components:
+  - type: Blueprint
+    providedRecipes:
+      - FlareLathe
+      - BoxDispenserFlare
+      - NFWeaponHoloflareGun
+  - type: StaticPrice
+    price: 75

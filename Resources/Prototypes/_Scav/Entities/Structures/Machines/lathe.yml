@@ -1,0 +1,35 @@
+- type: entity
+  id: TechFab #Generic techfab, no recipes by default but will replace departmental techfabs on ships for greater customization
+  parent: [ NFBlueprintReceiverBase, BaseLatheLube ]
+  name: techfab
+  description: A consumer-grade autolathe found on most ships. It comes packaged with no recipes, but can process standard autolathe blueprints.
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/techfab.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: inserting
+      map: ["enum.MaterialStorageVisualLayers.Inserting"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: TechFabMachineCircuitboard
+  - type: Lathe
+    idleState: icon
+    runningState: icon
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+  - type: OreSiloClient
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - BlueprintAutolathe
