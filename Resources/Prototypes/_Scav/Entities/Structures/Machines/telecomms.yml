@@ -1,0 +1,13 @@
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerFilledShuttle
+  suffix: Ship
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyMedical
+      - EncryptionKeyTraffic
+  - type: TelecomServer
+    range: 64 # Pretty small range since these are for normal shuttles

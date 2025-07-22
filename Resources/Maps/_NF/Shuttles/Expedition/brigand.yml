@@ -4655,7 +4655,7 @@ entities:
     - type: Transform
       pos: -3.5,7.5
       parent: 1
-- proto: TelecomServerFilledShuttle
+- proto: TelecomServerFilledExpeditionShuttle
   entities:
   - uid: 296
     components:
