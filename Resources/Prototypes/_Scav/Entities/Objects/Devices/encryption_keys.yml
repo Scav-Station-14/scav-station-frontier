@@ -1,0 +1,18 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyPublic
+  name: Public Channel encryption key
+  categories: [ DoNotMap ]
+  description: An encryption key for the public channel.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Public
+    defaultChannel: Public
+  - type: Item
+    sprite: _NF/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _NF/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gray
+    - state: common_label

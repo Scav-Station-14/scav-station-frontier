@@ -1,0 +1,7 @@
+- type: radioChannel
+  id: Public
+  name: chat-radio-public
+  keycode: "p"
+  frequency: 1469
+  color: "#a8326b"
+  longRange: true

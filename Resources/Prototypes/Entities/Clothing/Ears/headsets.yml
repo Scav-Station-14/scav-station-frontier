@@ -12,6 +12,7 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Headset
   - type: EncryptionKeyHolder
     keySlots: 10 # Frontier 4<10
@@ -46,6 +47,7 @@
       key_slots:
       - EncryptionKeyCargo
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: Clothing/Ears/Headsets/cargo.rsi
   - type: Clothing
@@ -74,6 +76,7 @@
       - EncryptionKeyCargo
 #      - EncryptionKeyCommand # Frontier
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   parent: [ ClothingHeadset, BaseCentcommCommandContraband ] # Frontier: Added BaseCentcommCommandContraband, removed BaseCentcommContraband.
@@ -117,6 +120,7 @@
       key_slots:
       - EncryptionKeyEngineering
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: Clothing/Ears/Headsets/engineering.rsi
   - type: Clothing
@@ -134,6 +138,7 @@
       - EncryptionKeyEngineering
 #      - EncryptionKeyCommand # Frontier
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   parent: ClothingHeadset
@@ -146,6 +151,7 @@
       key_slots:
       - EncryptionKeyMedical
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: Clothing/Ears/Headsets/medical.rsi
   - type: Clothing
@@ -163,6 +169,7 @@
       - EncryptionKeyMedical
 #      - EncryptionKeyCommand # Frontier
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   parent: ClothingHeadset
@@ -175,6 +182,7 @@
       key_slots:
       - EncryptionKeyScience
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: Clothing/Ears/Headsets/science.rsi
   - type: Clothing
@@ -191,6 +199,7 @@
       key_slots:
       - EncryptionKeyMedicalScience
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: Clothing/Ears/Headsets/medicalscience.rsi
   - type: Clothing
@@ -207,6 +216,7 @@
       key_slots:
       - EncryptionKeyRobo
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: Clothing/Ears/Headsets/robotics.rsi
   - type: Clothing
@@ -224,6 +234,7 @@
       - EncryptionKeyScience
 #      - EncryptionKeyCommand # Frontier
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   parent: [ClothingHeadset, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityLawyerContraband<BaseC2ContrabandUnredeemable
@@ -236,6 +247,7 @@
       key_slots:
       - EncryptionKeySecurity
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: Clothing/Ears/Headsets/security.rsi
   - type: Clothing
@@ -253,6 +265,7 @@
       - EncryptionKeyMedical
       - EncryptionKeySecurity
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: Clothing/Ears/Headsets/brigmedic.rsi
   - type: Clothing
@@ -269,6 +282,7 @@
       key_slots:
       - EncryptionKeyService
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: Clothing/Ears/Headsets/service.rsi
   - type: Clothing
@@ -300,6 +314,7 @@
         key_slots:
         # - EncryptionKeyStationMaster # Frontier
         - EncryptionKeyCommon # Frontier
+        - EncryptionKeyPublic # Scav
     - type: Sprite
       sprite: Clothing/Ears/Headsets/wizard.rsi
     - type: Clothing

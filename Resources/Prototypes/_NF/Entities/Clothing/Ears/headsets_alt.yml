@@ -29,6 +29,7 @@
       - EncryptionKeyCommon
       - EncryptionKeyNfsd
       - EncryptionKeyCommand
+      - EncryptionKeyPublic # Scav
   - type: Sprite
     sprite: _NF/Clothing/Ears/Headsets/nfsd_h_brown.rsi
   - type: Clothing
