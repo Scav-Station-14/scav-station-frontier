@@ -11217,7 +11217,7 @@ entities:
     - type: Transform
       pos: -4.5,-14.5
       parent: 1
-- proto: TelecomServerFilledShuttle
+- proto: TelecomServerFilledExpeditionShuttle
   entities:
   - uid: 1794
     components:

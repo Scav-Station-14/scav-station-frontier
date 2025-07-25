@@ -238,6 +238,7 @@
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyTraffic # Frontier
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   id: IntercomCommand
@@ -254,6 +255,7 @@
       - EncryptionKeyCommon
       - EncryptionKeyCommand
       - EncryptionKeyTraffic # Frontier
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   id: IntercomEngineering
@@ -268,6 +270,7 @@
       - EncryptionKeyCommon
       - EncryptionKeyEngineering
       - EncryptionKeyTraffic # Frontier
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   id: IntercomMedical
@@ -282,6 +285,7 @@
       - EncryptionKeyCommon
       - EncryptionKeyMedical
       - EncryptionKeyTraffic # Frontier
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   id: IntercomScience
@@ -296,6 +300,7 @@
       - EncryptionKeyCommon
       - EncryptionKeyScience
       - EncryptionKeyTraffic # Frontier
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   id: IntercomSecurity
@@ -311,6 +316,7 @@
       - EncryptionKeyCommon
       - EncryptionKeySecurity
       - EncryptionKeyTraffic # Frontier
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   id: IntercomService
@@ -325,6 +331,7 @@
       - EncryptionKeyCommon
       - EncryptionKeyService
       - EncryptionKeyTraffic # Frontier
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   id: IntercomSupply
@@ -339,6 +346,7 @@
       - EncryptionKeyCommon
       - EncryptionKeyCargo
       - EncryptionKeyTraffic # Frontier
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   id: IntercomAll
@@ -353,6 +361,7 @@
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyStationMaster
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   id: IntercomFreelance
@@ -366,3 +375,4 @@
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyFreelance
+      - EncryptionKeyPublic # Scav

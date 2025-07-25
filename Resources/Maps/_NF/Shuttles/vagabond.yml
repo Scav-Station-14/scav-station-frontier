@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 255.1.0
+  forkId: ""
+  forkVersion: ""
+  time: 07/25/2025 00:27:34
+  entityCount: 829
+maps: []
+grids:
+- 1
+orphans:
+- 1
+nullspace: []
 tilemap:
   0: Space
   30: FloorDark
@@ -56,6 +67,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -2439,14 +2451,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -8.5,10.5
       parent: 1
-- proto: ComputerFrame
-  entities:
-  - uid: 576
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -7.5,18.5
-      parent: 1
 - proto: ComputerRadar
   entities:
   - uid: 577
@@ -2895,6 +2899,14 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -9.5,14.5
+      parent: 1
+    - type: Fixtures
+      fixtures: {}
+  - uid: 828
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.5,6.5
       parent: 1
     - type: Fixtures
       fixtures: {}
@@ -4285,6 +4297,7 @@ entities:
     - type: Transform
       pos: -0.5,2.5
       parent: 1
+    - type: Conveyed
   - uid: 624
     components:
     - type: Transform
@@ -4295,19 +4308,19 @@ entities:
     - type: Transform
       pos: 0.5,2.5
       parent: 1
+- proto: LockerWallColorMedical
+  entities:
+  - uid: 682
+    components:
+    - type: Transform
+      pos: -4.5,7.5
+      parent: 1
 - proto: LockerWallMaterialsFuelPlasmaFilled2
   entities:
   - uid: 617
     components:
     - type: Transform
       pos: -0.5,11.5
-      parent: 1
-- proto: LockerWallMedical
-  entities:
-  - uid: 682
-    components:
-    - type: Transform
-      pos: -4.5,7.5
       parent: 1
 - proto: Mirror
   entities:
@@ -4479,19 +4492,12 @@ entities:
     - type: Transform
       pos: -3.5,5.5
       parent: 1
-- proto: PosterLegitSMHardhats
+- proto: PosterLegitSafetyMothHardhat
   entities:
   - uid: 697
     components:
     - type: Transform
       pos: -3.5,-2.5
-      parent: 1
-- proto: PowerCellRecharger
-  entities:
-  - uid: 708
-    components:
-    - type: Transform
-      pos: -4.5,5.5
       parent: 1
 - proto: Poweredlight
   entities:
@@ -4828,13 +4834,17 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         179:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         178:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         177:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         176:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 628
     components:
     - type: MetaData
@@ -4848,9 +4858,11 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         765:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         762:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 712
     components:
     - type: MetaData
@@ -4863,13 +4875,17 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         220:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         219:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         217:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         218:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: SignAtmos
   entities:
   - uid: 700
@@ -4883,6 +4899,14 @@ entities:
     components:
     - type: Transform
       pos: -9.5,15.5
+      parent: 1
+- proto: SinkWide
+  entities:
+  - uid: 826
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -4.5,6.5
       parent: 1
 - proto: SMESBasic
   entities:
@@ -5014,6 +5038,13 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -10.5,0.5
       parent: 1
+- proto: TelecomServerFilledShuttle
+  entities:
+  - uid: 576
+    components:
+    - type: Transform
+      pos: -7.5,18.5
+      parent: 1
 - proto: Thruster
   entities:
   - uid: 35
@@ -5111,69 +5142,117 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         210:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         211:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         212:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         196:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         195:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         194:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         193:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         205:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         206:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         207:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         208:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         209:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         564:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         593:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         764:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         763:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
   - uid: 595
     components:
     - type: Transform
@@ -5182,33 +5261,54 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         204:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         203:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         202:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         201:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         200:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         199:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
         197:
-        - Left: Forward
-        - Right: Reverse
-        - Middle: Off
+        - - Left
+          - Forward
+        - - Right
+          - Reverse
+        - - Middle
+          - Off
 - proto: VendingMachineCargoDrobe
   entities:
   - uid: 689
@@ -6045,6 +6145,13 @@ entities:
     components:
     - type: Transform
       pos: -7.5,-0.5
+      parent: 1
+- proto: WeaponCapacitorRecharger
+  entities:
+  - uid: 708
+    components:
+    - type: Transform
+      pos: -4.5,5.5
       parent: 1
 - proto: Window
   entities:

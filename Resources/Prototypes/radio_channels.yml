@@ -33,6 +33,7 @@
   keycode: 'm'
   frequency: 1355
   color: "#57b8f0"
+  longRange: true # Scav
 
 - type: radioChannel
   id: Science

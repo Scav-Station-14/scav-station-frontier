@@ -15,3 +15,17 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+
+- type: entity
+  id: TelecomServerShuttleCircuitboard
+  parent: TelecomServerCircuitboard
+  name: telecommunications array machine board
+  description: A machine printed circuit board for an shipbound telecommunications array
+  components:
+  - type: Sprite
+    state: engineering
+  - type: MachineBoard
+    prototype: TelecomServerShuttle
+    stackRequirements:
+      Steel: 1
+      Cable: 2

@@ -1,6 +1,17 @@
 meta:
-  format: 6
-  postmapinit: false
+  format: 7
+  category: Grid
+  engineVersion: 255.1.0
+  forkId: ""
+  forkVersion: ""
+  time: 07/25/2025 01:46:46
+  entityCount: 429
+maps: []
+grids:
+- 1
+orphans:
+- 1
+nullspace: []
 tilemap:
   0: Space
   30: FloorDark
@@ -52,6 +63,7 @@ entities:
       fixtures: {}
     - type: OccluderTree
     - type: Shuttle
+      dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity
       gravityShakeSound: !type:SoundPathSpecifier
@@ -1950,7 +1962,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,3.5
       parent: 1
-- proto: hydroponicsTrayAnchored
+- proto: hydroponicsTray
   entities:
   - uid: 38
     components:
@@ -2644,21 +2656,29 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         17:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         19:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         18:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         316:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         25:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         26:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         27:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         29:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
   - uid: 426
     components:
     - type: Transform
@@ -2668,31 +2688,44 @@ entities:
     - type: DeviceLinkSource
       linkedPorts:
         172:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         183:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         152:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         372:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         145:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         308:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         324:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         325:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         326:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         32:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         31:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         30:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
         28:
-        - Pressed: Toggle
+        - - Pressed
+          - Toggle
 - proto: Sink
   entities:
   - uid: 40
@@ -2836,6 +2869,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -1.5,0.5
+      parent: 1
+- proto: TelecomServerFilledShuttle
+  entities:
+  - uid: 429
+    components:
+    - type: Transform
+      pos: -8.5,4.5
       parent: 1
 - proto: Thruster
   entities:

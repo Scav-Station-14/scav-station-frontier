@@ -1,0 +1,40 @@
+- type: entity
+  parent: TelecomServer
+  id: TelecomServerShuttle
+  name: telecommunications array
+  suffix: Ship Empty
+  components:
+  - type: Sprite
+    sprite: _Scav/Structures/Machines/telecomms.rsi #custom sprite for these
+    snapCardinals: true
+    layers:
+    - state: icon
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyPublic
+      - EncryptionKeyMedical
+      - EncryptionKeyTraffic
+  - type: Machine
+    board: TelecomServerShuttleCircuitboard
+  - type: TelecomServer
+    range: 64 # Pretty small range since these are for normal shuttles
+
+- type: entity
+  parent: TelecomServerShuttle
+  id: TelecomServerFilledShuttle
+  suffix: Ship
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyPublic
+      - EncryptionKeyMedical
+      - EncryptionKeyTraffic

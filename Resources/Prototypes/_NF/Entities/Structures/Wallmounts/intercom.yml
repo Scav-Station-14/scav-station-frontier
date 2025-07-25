@@ -71,3 +71,4 @@
       - EncryptionKeyCommon
       - EncryptionKeyNfsd
       - EncryptionKeyTraffic # Frontier
+      - EncryptionKeyPublic # Scav

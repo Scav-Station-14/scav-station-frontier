@@ -16,6 +16,7 @@
       - EncryptionKeyCommand
       - EncryptionKeyNfsd
       - EncryptionKeyTraffic
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   parent: TelecomServer
@@ -34,17 +35,23 @@
       - EncryptionKeyService
       - EncryptionKeyNfsd
       - EncryptionKeyTraffic
+      - EncryptionKeyPublic # Scav
+  - type: TelecomServer
+    range: 128 #Currently this server is only used on the Wasp, which is expedition-capable so should have the same values as expedition ships
 
 - type: entity
   parent: TelecomServer
-  id: TelecomServerFilledShuttle
-  suffix: Ship
+  id: TelecomServerFilledExpeditionShuttle # Scav: Renamed to ExpeditionShuttle to differentiate from the new shuttle telecomservers
+  suffix: Ship, Expedition
   components:
   - type: ContainerFill
     containers:
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyMedical
+      - EncryptionKeyPublic # Scav
+  - type: TelecomServer
+    range: 128 #These are needed on away sites, so fairly large range desirable
 
 - type: entity
   parent: TelecomServer

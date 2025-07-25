@@ -45,6 +45,7 @@
   - type: EncryptionKey
     channels:
     - Common
+    - Public # Scav
     - Medical
     - Command
     defaultChannel: Common

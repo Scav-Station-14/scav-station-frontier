@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 06/24/2025 02:15:20
-  entityCount: 624
+  time: 07/25/2025 01:55:33
+  entityCount: 626
 maps: []
 grids:
 - 1
@@ -3541,7 +3541,7 @@ entities:
   - uid: 420
     components:
     - type: Transform
-      pos: 2.515625,3.536542
+      pos: 2.4986582,3.485655
       parent: 1
 - proto: MonkeyCubeWrapped
   entities:
@@ -3642,11 +3642,13 @@ entities:
       parent: 1
 - proto: PottedPlant10
   entities:
-  - uid: 434
+  - uid: 625
     components:
     - type: Transform
-      pos: -1.5,1.5
+      pos: -2.1623268,1.8950002
       parent: 1
+    - type: Pullable
+      prevFixedRotation: True
 - proto: Poweredlight
   entities:
   - uid: 238
@@ -4248,6 +4250,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 7.5,-1.5
       parent: 1
+- proto: SinkEmpty
+  entities:
+  - uid: 626
+    components:
+    - type: Transform
+      pos: 0.5,7.5
+      parent: 1
 - proto: SMESBasic
   entities:
   - uid: 154
@@ -4402,6 +4411,13 @@ entities:
       pos: -3.5,1.5
       parent: 1
   - uid: 608
+    components:
+    - type: Transform
+      pos: -1.5,1.5
+      parent: 1
+- proto: TelecomServerFilledShuttle
+  entities:
+  - uid: 434
     components:
     - type: Transform
       pos: -1.5,1.5

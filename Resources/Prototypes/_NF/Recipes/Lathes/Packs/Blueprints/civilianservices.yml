@@ -13,6 +13,7 @@
   - VimHarness
   # AudioVisualCommunication
   - TelecomServerCircuitboard
+  - TelecomServerShuttleCircuitboard
   - NFHolopadShipMachineCircuitboard
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraMonitorCircuitboard

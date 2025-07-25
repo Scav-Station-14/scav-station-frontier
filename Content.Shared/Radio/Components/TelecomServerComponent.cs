@@ -9,4 +9,10 @@ namespace Content.Shared.Radio.Components;
 [RegisterComponent]
 public sealed partial class TelecomServerComponent : Component
 {
+    /// <summary>
+    ///     Range of the server.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("range")]
+    public float range = 100;
 }

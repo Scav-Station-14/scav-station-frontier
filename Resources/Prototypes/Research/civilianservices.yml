@@ -53,6 +53,7 @@
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
   - TelecomServerCircuitboard
+  - TelecomServerShuttleCircuitboard
 #  - HolopadMachineCircuitboard # Frontier: needs work before use
   - NFHolopadShipMachineCircuitboard # Frontier
 

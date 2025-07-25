@@ -9,6 +9,7 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   parent: ClothingHeadset
@@ -24,6 +25,7 @@
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyNfsd
+      - EncryptionKeyPublic # Scav
 
 - type: entity
   parent: ClothingHeadsetNfsdBrown
