@@ -225,6 +225,11 @@
           32:
             sprite: _Scav/Mobs/Species/Yinglet/displacement.rsi
             state: belt
+      mask:
+        sizeMaps:
+          32:
+            sprite: _Scav/Mobs/Species/Yinglet/displacement.rsi
+            state: mask
 
 
 - type: entity

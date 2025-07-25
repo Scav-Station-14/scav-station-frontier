@@ -21,6 +21,10 @@
     {
       "name": "equipped-EYES-vox",
       "directions": 4
+    },
+    {
+      "name": "equipped-EYES-yinglet",
+      "directions": 4
     }
   ]
 }
