@@ -4,8 +4,8 @@ meta:
   engineVersion: 255.1.0
   forkId: ""
   forkVersion: ""
-  time: 07/14/2025 02:12:02
-  entityCount: 852
+  time: 07/25/2025 00:21:45
+  entityCount: 853
 maps: []
 grids:
 - 1
@@ -1460,7 +1460,7 @@ entities:
       pos: 3.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -3569.7722
+      secondsUntilStateChange: -3776.8357
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1942,7 +1942,7 @@ entities:
   - uid: 95
     components:
     - type: Transform
-      pos: 3.4692008,-0.6169429
+      pos: -2.3874688,7.747331
       parent: 1
 - proto: ButtonFrameCaution
   entities:
@@ -2747,12 +2747,12 @@ entities:
   - uid: 232
     components:
     - type: Transform
-      pos: 3.1251953,-0.24194288
+      pos: -2.1811805,7.571813
       parent: 1
   - uid: 233
     components:
     - type: Transform
-      pos: 3.2815616,-0.17944288
+      pos: -2.4975846,7.9101014
       parent: 1
 - proto: Catwalk
   entities:
@@ -3147,7 +3147,7 @@ entities:
       pos: -1.5,-1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -11050.217
+      secondsUntilStateChange: -11257.28
       state: Closing
     - type: DeviceNetwork
       configurators:
@@ -5081,14 +5081,12 @@ entities:
   - uid: 488
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.7037504,-0.38256788
+      pos: -2.2639825,8.031445
       parent: 1
   - uid: 489
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.8444803,-0.27319288
+      pos: -2.3214278,7.933212
       parent: 1
 - proto: MedicalBed
   entities:
@@ -5102,14 +5100,12 @@ entities:
   - uid: 491
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.4066541,-0.33569288
+      pos: -2.2550402,7.725454
       parent: 1
   - uid: 492
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.547384,-0.21069288
+      pos: -2.431159,7.6796994
       parent: 1
 - proto: MonkeyCubeWrapped
   entities:
@@ -5943,12 +5939,6 @@ entities:
       parent: 1
 - proto: TableReinforced
   entities:
-  - uid: 613
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 3.5,-0.5
-      parent: 1
   - uid: 615
     components:
     - type: Transform
@@ -6026,6 +6016,13 @@ entities:
     components:
     - type: Transform
       pos: 5.5,12.5
+      parent: 1
+- proto: TelecomServerFilledShuttle
+  entities:
+  - uid: 613
+    components:
+    - type: Transform
+      pos: 3.5,-0.5
       parent: 1
 - proto: Thruster
   entities:
@@ -6859,6 +6856,12 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -10.5,6.5
+      parent: 1
+  - uid: 853
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 6.5,2.5
       parent: 1
 - proto: WarpPoint
   entities:
