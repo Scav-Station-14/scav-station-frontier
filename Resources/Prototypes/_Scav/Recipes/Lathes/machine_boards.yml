@@ -2,3 +2,8 @@
   parent: [ BaseCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
   id: TechFabMachineCircuitboard
   result: TechFabMachineCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
+  id: TelecomServerShuttleCircuitboard
+  result: TelecomServerShuttleCircuitboard
