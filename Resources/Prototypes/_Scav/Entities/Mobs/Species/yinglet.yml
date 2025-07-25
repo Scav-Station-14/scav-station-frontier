@@ -90,21 +90,21 @@
         damage: 200
       behaviors:
       - !type:GibBehavior { }
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Heat
-        damage: 800
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawnInContainer: true
-        spawn:
-          Ash:
-            min: 1
-            max: 1
-      - !type:BurnBodyBehavior { }
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MeatLaserImpact
+    # - trigger: # Scav: removed to match frontier's handling of
+    #     !type:DamageTypeTrigger
+    #     damageType: Heat
+    #     damage: 800
+    #   behaviors:
+    #   - !type:SpawnEntitiesBehavior
+    #     spawnInContainer: true
+    #     spawn:
+    #       Ash:
+    #         min: 1
+    #         max: 1
+    #   - !type:BurnBodyBehavior { }
+    #   - !type:PlaySoundBehavior
+    #     sound:
+    #       collection: MeatLaserImpact
   - type: MeleeWeapon
     soundHit:
       collection: BarestepWood
@@ -129,7 +129,14 @@
   - type: MovementSpeedModifier
     basewalkspeed: 4
     basesprintspeed: 6
-#at some point maybe add body heat differences from humans but its fine for now
+  - type: ThermalRegulator #Yinglets have about 1/7 the mass of humans so these need to change
+    metabolismHeat: 400
+    radiatedHeat: 50
+    implicitHeatRegulation: 150
+    sweatHeatRegulation: 250
+    shiveringHeatRegulation: 250
+    normalBodyTemperature: 310.15 #may want a higher body temperature than humans eventually but this is fine for now
+    thermalRegulationTemperatureThreshold: 2
   - type: Sprite #some layers need reordering
     size: 0.8, 0.8
     layers:
