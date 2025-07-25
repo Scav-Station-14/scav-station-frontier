@@ -32,6 +32,8 @@
   maxLimit: 6
   loadouts:
     - IvenmothRecruitShipVoucher
+    - IvenmothRecruitShipVoucherExpedition
+    - IvenmothRecruitShipVoucherMedical
   subgroups:
     - ContractorBackpackItems
   fallbacks:

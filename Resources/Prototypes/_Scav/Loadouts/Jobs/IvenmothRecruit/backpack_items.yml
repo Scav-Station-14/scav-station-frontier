@@ -4,3 +4,18 @@
   storage:
     back:
     - ShipVoucherIvenmoth
+
+- type: loadout
+  id: IvenmothRecruitShipVoucherExpedition
+  price: 0
+  storage:
+    back:
+    - ShipVoucherIvenmothExpedition
+
+- type: loadout
+  id: IvenmothRecruitShipVoucherMedical
+  price: 0
+  storage:
+    back:
+    - ShipVoucherIvenmothMedical
+
