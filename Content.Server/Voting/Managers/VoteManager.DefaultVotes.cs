@@ -629,7 +629,7 @@ namespace Content.Server.Voting.Managers
                     var roundEnd = _entityManager.EntitySysManager.GetEntitySystem<RoundEndSystem>();
                     roundEnd.CancelRoundEndCountdown(null, false);
                 }
-                if (total > 0 && votesYes / (float)total <= 0.5)
+                if (total > 0 && votesYes / (float)total < 0.5)
                 {
                     _adminLogger.Add(LogType.Vote, LogImpact.Medium, $"Vote to extend Failed:  Yes: {votesYes} / No: {votesNo}.");
                     _chatManager.DispatchServerAnnouncement(Loc.GetString("ui-vote-extend-fail", ("votedYes", votesYes), ("votedNo", votesNo), ("votedAbst", votesDunno)));
