@@ -24,4 +24,16 @@ public sealed partial class GeneralStationRecordConsoleComponent : Component
     /// </summary>
     [DataField]
     public bool CanDeleteEntries;
+
+    /// <summary>
+    /// Whether the station is currently hiring or not.
+    /// </summary>
+    [DataField]
+    public bool AllJobsAvalible; //scav'
+
+    /// <summary>
+    /// Whether the console is ship or station one.
+    /// </summary>
+    [DataField]
+    public bool UseAllJobsToggle; //scav
 }

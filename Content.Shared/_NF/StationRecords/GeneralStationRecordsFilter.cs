@@ -25,3 +25,15 @@ public sealed class SetStationAdvertisementMsg : BoundUserInterfaceMessage
         Advertisement = advertisement;
     }
 }
+
+[Serializable, NetSerializable]
+public sealed class SetStationJobMsg : BoundUserInterfaceMessage //scav message for setting jobs
+{
+    public bool State { get; }
+
+    public SetStationJobMsg( bool state)
+    {
+
+        State = state;
+    }
+}

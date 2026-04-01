@@ -3,7 +3,7 @@
                Title="{Loc 'general-station-record-console-window-title'}"
                MinSize="800 500"> <!-- Frontier: width 750<800, add graphics namespace -->
     <BoxContainer Orientation="Vertical">
-        <BoxContainer Margin="5 5 5 10" HorizontalExpand="True">
+        <BoxContainer Name="FiltersContainer" Margin="5 5 5 10" HorizontalExpand="True" Visible="True"> <!-- Scav hide filters to prevent interaction due to causing issues with persistence-->
             <OptionButton Name="StationRecordsFilterType" MinWidth="200" Margin="0 0 10 0"/>
             <LineEdit Name="StationRecordsFiltersValue"
                 PlaceHolder="{Loc 'general-station-record-for-filter-line-placeholder'}" HorizontalExpand="True"/>
@@ -18,10 +18,22 @@
                     <ItemList Name="RecordListing" />
                 </ScrollContainer>
                 <ScrollContainer VerticalExpand="True">
+                            <BoxContainer Name="JobsButtons" Margin="5 5 5 10" Visible="True"> <!-- Scav bulk jobs open and close buttons-->
+                                <Label Name="mainlabel" Text="Open Ship hiring" ToolTip="hiring" Visible="True" />
+                                <Button Name="OpenJobsButton"
+                                    Access="Public"
+                                    ToolTip="Open hiring"
+                                    Text="Open"
+                                    Visible="True"
+                                    StyleClasses="OptionLeft"
+                                    ToggleMode="True"/>
+                                <Label Name="AllJobsAvalibleLabel" Text="" ToolTip="hiring" Visible="True" />
+                            </BoxContainer><!-- Scav end -->
                     <BoxContainer Name="JobListing"
                                   Orientation="Vertical"
                                   HorizontalExpand="True"
-                                  VerticalExpand="True">
+                                  VerticalExpand="True"
+                                  Visible="True"> <!-- Scav -->
                     </BoxContainer>
                 </ScrollContainer>
             </BoxContainer>

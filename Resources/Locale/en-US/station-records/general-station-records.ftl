@@ -19,3 +19,5 @@ general-station-record-dna-filter = DNA
 general-station-record-console-search-records = Search
 general-station-record-console-reset-filters = Reset
 general-station-record-console-delete = Delete
+general-station-record-console-hiring-open = Ship Jobs Open
+general-station-record-console-hiring-closed = Ship Jobs Closed

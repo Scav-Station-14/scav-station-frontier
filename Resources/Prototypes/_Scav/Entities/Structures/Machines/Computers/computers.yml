@@ -1,0 +1,45 @@
+- type: entity
+  parent: BaseComputerStationRecords
+  id: ComputerStationRecordsShip
+  name: ship records computer
+  components:
+    - type: GeneralStationRecordConsole
+      useAllJobsToggle: true  # Scav: Use all jobs toggle for ship records computer
+
+- type: entity
+  parent: [BaseStructureComputerWallmount, ComputerStationRecordsShip]
+  id: ComputerWallmountStationRecordsShip
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _NF/Structures/Machines/computer_wallmount.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_wallmount
+    - map: ["computerLayerScreen"]
+      state: screen_records
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+
+- type: entity
+  parent: [BaseStructureComputerTabletop, ComputerStationRecordsShip]
+  id: ComputerTabletopStationRecordsShip
+  components:
+  - type: Sprite
+    drawdepth: SmallObjects
+    layers:
+    - map: ["computerLayerBody"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: computer_tabletop
+    - map: ["computerLayerKeyboard"]
+      sprite: _NF/Structures/Machines/computer_tabletop.rsi
+      state: generic_keyboard_tabletop
+    - map: ["computerLayerScreen"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic
+    - map: ["computerLayerKeys"]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      sprite: Structures/Machines/computers.rsi
+      state: generic_panel_open

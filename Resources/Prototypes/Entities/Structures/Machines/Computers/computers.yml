@@ -425,9 +425,10 @@
 
 - type: entity
   parent: BaseComputerAiAccess
-  id: ComputerStationRecords
+  id: BaseComputerStationRecords
   name: station records computer
   description: This can be used to check station records.
+  abstract: true
   components:
   - type: GeneralStationRecordConsole
   - type: UserInterface
@@ -447,6 +448,14 @@
   - type: GuideHelp
     guides:
     - Forensics
+
+- type: entity
+  parent: BaseComputerStationRecords
+  id: ComputerStationRecords
+  name: station records computer
+  components:
+    - type: ShipyardSellCondition
+      preserveOnSale: true
 
 - type: entity
   parent: BaseComputerAiAccess

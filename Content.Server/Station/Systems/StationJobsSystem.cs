@@ -238,13 +238,16 @@ public sealed partial class StationJobsSystem : EntitySystem
         string jobPrototypeId,
         int amount,
         bool createSlot = false,
-        StationJobsComponent? stationJobs = null)
+        StationJobsComponent? stationJobs = null,
+        bool? AllowNegative = false)  // Scav allow setting negative slots for scav fork, bypassing the limitation in the base method
     {
         if (!Resolve(station, ref stationJobs))
             throw new ArgumentException("Tried to use a non-station entity as a station!", nameof(station));
-        if (amount < 0)
-            throw new ArgumentException("Tried to set a job to have a negative number of slots!", nameof(amount));
 
+        if(AllowNegative != true)
+            if (amount < 0)
+                throw new ArgumentException("Tried to set a job to have a negative number of slots!", nameof(amount));
+        // Scav end
         var jobList = stationJobs.JobList;
 
         switch (jobList.ContainsKey(jobPrototypeId))

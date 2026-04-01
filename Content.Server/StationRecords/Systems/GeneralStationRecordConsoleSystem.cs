@@ -11,6 +11,7 @@ using Content.Server._NF.Station.Components; // Frontier
 using Content.Server.Administration.Logs; // Frontier
 using Content.Shared.Database; // Frontier
 using Content.Shared._NF.StationRecords; // Frontier
+using Content.Shared._Scav.Persistence; // Scav
 
 namespace Content.Server.StationRecords.Systems;
 
@@ -29,6 +30,7 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
         SubscribeLocalEvent<GeneralStationRecordConsoleComponent, RecordModifiedEvent>(UpdateUserInterface);
         SubscribeLocalEvent<GeneralStationRecordConsoleComponent, AfterGeneralRecordCreatedEvent>(UpdateUserInterface);
         SubscribeLocalEvent<GeneralStationRecordConsoleComponent, RecordRemovedEvent>(UpdateUserInterface);
+        SubscribeLocalEvent<GeneralStationRecordConsoleComponent, GridReInitEvent>(OnGridReInit);
 
         Subs.BuiEvents<GeneralStationRecordConsoleComponent>(GeneralStationRecordConsoleKey.Key, subs =>
         {
@@ -38,6 +40,7 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
             subs.Event<DeleteStationRecord>(OnRecordDelete);
             subs.Event<AdjustStationJobMsg>(OnAdjustJob); // Frontier
             subs.Event<SetStationAdvertisementMsg>(OnAdvertisementChanged); // Frontier
+            subs.Event<SetStationJobMsg>(OnSetJob); // Scav
         });
     }
 
@@ -142,12 +145,15 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
         {
             jobList = _stationJobsSystem.GetJobs(owningStation.Value);
             if (TryComp<ExtraShuttleInformationComponent>(owningStation, out var extraVessel))
+            {
                 advertisement = extraVessel.Advertisement;
+
+            }
         }
 
         if (!TryComp<StationRecordsComponent>(owningStation, out var stationRecords))
         {
-            _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, new GeneralStationRecordConsoleState(null, null, null, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement)); // Frontier: add as many args as we can
+            _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, new GeneralStationRecordConsoleState(null, null, null, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement, ent.Comp.AllJobsAvalible, ent.Comp.UseAllJobsToggle)); // Frontier: add as many args as we can, scav too
             return;
         }
 
@@ -156,7 +162,7 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
         switch (listing.Count)
         {
             case 0:
-                var consoleState = new GeneralStationRecordConsoleState(null, null, null, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement); // Frontier: add as many args as we can
+                var consoleState = new GeneralStationRecordConsoleState(null, null, null, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement, ent.Comp.AllJobsAvalible, ent.Comp.UseAllJobsToggle); // Frontier: add as many args as we can, scav too
                 _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, consoleState);
                 return;
             default:
@@ -167,14 +173,64 @@ public sealed class GeneralStationRecordConsoleSystem : EntitySystem
 
         if (console.ActiveKey is not { } id)
         {
-            _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, new GeneralStationRecordConsoleState(null, null, listing, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement)); // Frontier: add as many args as we can
+            _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, new GeneralStationRecordConsoleState(null, null, listing, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement, ent.Comp.AllJobsAvalible, ent.Comp.UseAllJobsToggle)); // Frontier: add as many args as we can, scav too
             return;
         }
 
         var key = new StationRecordKey(id, owningStation.Value);
         _stationRecords.TryGetRecord<GeneralStationRecord>(key, out var record, stationRecords);
 
-        GeneralStationRecordConsoleState newState = new(id, record, listing, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement);
+        GeneralStationRecordConsoleState newState = new(id, record, listing, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement, ent.Comp.AllJobsAvalible, ent.Comp.UseAllJobsToggle); //scav added arg
         _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, newState);
     }
+
+    //scav explicit set job message handler, checks copied from frontier adjust job handler
+    private void OnSetJob(Entity<GeneralStationRecordConsoleComponent> ent, ref SetStationJobMsg msg)
+    {
+        var stationUid = _station.GetOwningStation(ent);
+        IReadOnlyDictionary<ProtoId<JobPrototype>, int?>? jobList = null;
+        if (stationUid is EntityUid station)
+        {
+            if (TryComp(stationUid, out StationJobsComponent? stationJobs) &&
+                (stationJobs.Groups.Count > 0 || stationJobs.Tags.Count > 0))
+            {
+                var accessSources = _access.FindPotentialAccessItems(msg.Actor);
+                var access = _access.FindAccessTags(msg.Actor, accessSources);
+                bool hasAccess = stationJobs.Tags.Any(access.Contains);
+                if (!hasAccess)
+                {
+                    foreach (var group in stationJobs.Groups)
+                    {
+                        if (!_proto.TryIndex(group, out var accessGroup))
+                            continue;
+
+                        hasAccess = accessGroup.Tags.Any(access.Contains);
+                        if (hasAccess)
+                            break;
+                    }
+                }
+                if (!hasAccess)
+                {
+                    UpdateUserInterface(ent);
+                    return;
+                }
+            }
+            jobList = _stationJobsSystem.GetJobs(stationUid.Value);
+            foreach (var job in jobList.Keys)
+            {
+                if(msg.State)
+                    _stationJobsSystem.TrySetJobSlot(station, job, 0, false, null, true);
+                else
+                    _stationJobsSystem.TrySetJobSlot(station, job, -1, false, null, true);
+            }
+            // Toggle hiring status
+            ent.Comp.AllJobsAvalible = !msg.State;
+            UpdateUserInterface(ent);
+        }
+    }
+
+    private void OnGridReInit(Entity<GeneralStationRecordConsoleComponent> ent, ref GridReInitEvent args)// Scav reset hiring status on gridreinit event for persitent ships
+    {
+        ent.Comp.AllJobsAvalible = false;
+    }// Scav end
 }
